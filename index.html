@@ -1,1768 +1,1730 @@
 
-
-
-
-<!DOCTYPE html>
-<html>
-<meta content="IE=Edge" http-equiv="x-ua-compatible">
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, initial-scale=1.0" />
-
-<head>
-	<!-- This script loads the Appian Web components; change it to your Appian server's domain -->
-    <script src="https://sits3.appiancloud.com/suite/tempo/ui/sail-client/embeddedBootstrap.nocache.js" id="appianEmbedded"></script>
-	
-	<base href="http://www.tevapharm.com/" /><script src="/ScriptResource.axd?d=LEChH7nDSO924YaIb-L594HuyUb9ZfxhtsGKbpJK1dZ0le-u6JP7e2rmiYzkCRTp7bu-_nTN3awvEY1Yc0cFV2g5T_roJtbOWs_mM-5GEbIkuWUAjgfNW0a5m-6MS9Yx0&amp;t=ffffffffcc822418" type="text/javascript"></script>
-
-    <script src="/ScriptResource.axd?d=cZwP1k4AGlg4aD9zeYTxVIL3ZQkSGWxd3VChoCTq6B_8jbDDxuEkWBCMwcvShu1RAVhmaCQXY8HtJQdVeZeQGQHnjP1VDjO9GsbltJsV1Spm3jMjcUaF9iq8PBlHnLsj0&amp;t=ffffffffcc822418" type="text/javascript"></script><script src="/ScriptResource.axd?d=LeDNpMLEurF-Gv2rjfn0Qp-uxiXMx7FHGxnol2TrS-SKRxz6fYREPM758iKg7EPoNmtlCbcSZtsXiwL9LYbZytzm4h5LNNRxYAoSQIFBGuyl7x5nTd0XWvJ6tkDHkm3P0&amp;t=ffffffffcc822418" type="text/javascript"></script><script type="text/javascript">PioWeb.BrName="WebKit";PioWeb.BrVers=58;PioWeb.NullGifSrc="/SVTemplate/img/_blank.gif";PioWeb.setPagePathProps("/","./");PioWeb.Lang="en";</script><title>Patient &amp; Drug Safety and Pharmacovigilance | Teva Pharmaceutical Industries</title><meta name="description" content="At Teva Pharmaceutical Industries, we take patient safety and pharmacovigilance very seriously. Patient safety is our focus, and at the heart of all we do." /><meta name="keywords" content="Patient Safety and Pharmacovigilance ,Assuring Patient Safety, Quality Improvement, patient safety,Teva pharmaceutical" /><link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=EE6EDE68A9EC35508876D2535F8FC80E7D541DD1E696A9A7D69E769E76AA46F9C897F3166F1134A7BEDDB3AA7747A8DF9BE3BD68F8F4F5A885A20C60D496730F7F1199DE2DA679F1C46A15FCF60C0A41746C5F002E6E91996125269947ECA6A61C3027C9EAA0DB1BF5565740FAA094A7CDCE73C612CDF89E6F3BD706359C1C0A4A96BDF791E0052FD0EB299A0FE20A4B"/>
-<!--[if IE]>
-<link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=5C6D3488CE6D9C5350B3B073D93AEF9FE2AF10213DEBAD4C597BF12F4B53C4AED25A2A224AE04F243F59A858C0296C6A530682F89832DB87E4ECAF5207EE635DB372CE474E1B6B88FEB1E6A501A102D53FD269633823D2C122671C987D942C2BD7912A18DD632FA6B84E0D12F682C0658763FA8618BA6A51394800B06E743CD332D2CFB94CE63CCC980C109F7A78DD4D"/>
-<!--<![endif]-->
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=B6C302F9BE63B789D22B13CE5F39B76722B892692DEDB88F5FED488D5B10B8FDBE43748403E8D50100EF1A821043EDB22B6B5116F8AC6DADED0EF3DF063C18BC821E231C1ECEB6C234C4535CD7A3769541BDA19A51B1289689772890DA3A4740D1B203332F40213304FB2D84BF25D0B4DDC85A0C09A128E715989BF06DE9B45862F838272DCAD91D21E8491FFDF1B9E6"/>
-<!--<![endif]-->
-<!--[if !IE]>-->
-<link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=DEB1F1E6AA1D1FE4B929701E932A43864C5E75900BC609BDA9C4F30612A640A8C671C722CA8DE5D07C55746BEB175DC0D497A0048B030090448FDCACB8F5414CF3EC508995B204825EBB06C1D95A64032B090D4F42886668D68DE7B0B639BCF5712AC9E9F33628D9ABB72565C29B9052ACBF7411F810A91A395D83C16EC48F72AC1FEB29091B898799067D0C92D3F2E4"/>
-<!--<![endif]-->
-<link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=EE6EDE68A9EC35508876D2535F8FC80E7D541DD1E696A9A7D69E769E76AA46F9C897F3166F1134A7BEDDB3AA7747A8DF9BE3BD68F8F4F5A885A20C60D496730F7F1199DE2DA679F1C46A15FCF60C0A41746C5F002E6E91996125269947ECA6A6965219DB954E6EE214073E334F98598A90C3D628F1A9AB55AD92D59874DF222A137D462573CD5A791F509B815FCD437A"/>
-<link type="text/css" rel="stylesheet" href="/SVTemplate/css/PioCssResource.axd?d=D1536C394E0D4BF6AC2354522BE52D448D94FB44E93A2DD651C8EFD98ED14D28A8510C2BAD0B38A07EB8288F8BE8A14ADEC3A79A6F69ABF0F66FD706536A8B84C1E6E15AA717D8ADE75D24BE7E1865C925A8CAEC33C81C1CF43CE1B4BF6893D347ACEEA19317D9D5FF5A93AE447A75C29A648F0200BC97A5A75746F3EBED153BAF4CFFBC9DA8249819013B52C7800B28"/>
-
-    <style>
-        @font-face {
-	        font-family: 'teva';
-		      src: url('svtemplate/css/fonts/teva.eot?2691236');
-		      src: url('svtemplate/css/fonts/teva.eot?2691236#iefix') format('embedded-opentype'),
-			       url('svtemplate/css/fonts/teva.woff?2691236') format('woff'),
-			       url('svtemplate/css/fonts/teva.ttf?2691236') format('truetype'),
-			       url('svtemplate/css/fonts/teva.svg?2691236#teva') format('svg');
-		      font-weight: normal;
-		      font-style: normal;
-		}
-	</style>
-    <!-- link rel="stylesheet" href="~/SvTemplate/css/icon-fonts.css"-->
-
-    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.2)" /><meta http-equiv="Page-Exit" content="blendTrans(Duration=0.1)" />
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Claims</title>
     
-	<script type="text/javascript">PioEffectsContentsFaider_Config.bgColor = "white";</script>
+    
+    <meta name="template" content="product-page-template"/>
+    
+
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+     
+    
+	
+    <meta property="og:title" content="Claims"/>
+    <meta property="og:description"/>
+    <meta property="og:url" content="https://www.farmers.com/content/falcon/en/index/claims.html"/>
+	    
+
+
+    <meta name="twitter:title" content="Claims"/>
+    <meta name="twitter:description"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@WeAreFarmers"/>
+    <meta name="twitter:site" content="www.farmers.com"/>
+  	
+	
+    <link rel="canonical" href="https://www.farmers.com/content/falcon/en/index/claims.html"/>
 	
 	
     
-    <script type="text/javascript" src="SVTemplate/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="SVTemplate/js/jquery.ellipsis.min.js" async></script>
-    <script type="text/javascript" src="SVTemplate/royalslider/jquery.royalslider.min.js"></script>
-    <script type="text/javascript" src="SVTemplate/js/modernizr.custom.js"></script>
-    <script type="text/javascript" src="SVTemplate/js/background-check.min.js"></script>
+    	
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--[if lte IE 9]>
-        <script type="text/javascript" src="SVTemplate/js/jquery.placeholder.min.js"></script>
-    <![endif]-->
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="SVTemplate/js/html5.js"></script>
-    <![endif]-->
+<link rel="stylesheet" href="/etc.clientlibs/farmers/clientlibs/clientlib-libraries.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/farmers/clientlibs/clientlib-base.css" type="text/css">
 
-    <!--[if gte IE 9]>
-      <style type="text/css">
-        .gradient {
-           filter: none;
+
+
+     
+	
+	   
+	
+    
+<script type="text/javascript" src="/etc.clientlibs/clientlibs/granite/jquery.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/clientlibs/granite/utils.js"></script>
+<script src="https://fca-demo.appiancloud.com/suite/tempo/ui/sail-client/embeddedBootstrap.nocache.js" id="appianEmbedded"></script>
+
+
+	<script type="text/javascript">
+            (function() {
+                window.ContextHub = window.ContextHub || {};
+
+                /* setting paths */
+                ContextHub.Paths = ContextHub.Paths || {};
+                ContextHub.Paths.CONTEXTHUB_PATH = "/etc/cloudsettings/default/contexthub";
+                ContextHub.Paths.RESOURCE_PATH = "\/content\/falcon\/en\/index\/claims\/_jcr_content\/contexthub";
+                ContextHub.Paths.SEGMENTATION_PATH = "\/etc\/segmentation\/contexthub";
+                ContextHub.Paths.CQ_CONTEXT_PATH = "";
+
+                /* setting initial constants */
+                ContextHub.Constants = ContextHub.Constants || {};
+                ContextHub.Constants.ANONYMOUS_HOME = "/home/users/q/q7vkeiJueV7at1Rvbfkj";
+                ContextHub.Constants.MODE = "no-ui";
+            }());
+        </script><script src="/etc/cloudsettings/default/contexthub.kernel.js" type="text/javascript"></script>
+
+
+	<!-- Krux Integration -->
+    <script type="text/javascript">
+        try {
+          var segmentProvider = {
+            name: 'kruxSegments',
+            version: '1.0.0',
+            timeout: 2000,
+            provider: function(callback) {
+              (function pollForKUID(){
+                try {
+                  if (localStorage.getItem('kxfarmers_kuid') !== null) {
+                    var kuid = localStorage.getItem('kxfarmers_kuid');
+                    var url = 'https://cdn.krxd.net/userdata/v2/segments/f02be25b-ed05-4972-a144-57653f813683/user/'+kuid;
+        
+                    $.ajax({
+                      type: "GET",
+                      url: url,
+                      dataType: "json",
+                      success: function(data) {
+                        var segmentsArray = JSON.parse(data).body.segments;
+                        callback(null, {
+                          kruxSegments: segmentsArray.join(' ');
+                        });
+                      },
+                      error: function(err){
+                        console.log("Error", err);
+                        callback(err);
+                      }
+                    });
+                  } else if (document.readyState !== 'complete'){
+                    return setTimeout(pollForKUID, 50);
+                  }
+                } catch (e) {
+                  console.warn('Krux Mbox Integration Polling Error', e);
+                }
+              })();
+            }
+          }
+        
+          window.targetGlobalSettings = {
+            dataProviders: [
+              segmentProvider
+            ]
+          }
+        } catch(e) {
+          console.error('Krux Mbox Integration Error', e);
         }
-      </style>
-    <![endif]-->
-    
-
-    
-    
-	
-    <link rel="shortcut icon" href="/SVTemplate/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/SVTemplate/img/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="/SVTemplate/js/singlePageApp/handlebars-v2.0.0.js" async></script>
-    <link rel="stylesheet" type="text/css" href="/SVTemplate/css/fonts.css">
-    
-    
-    
-    <link rel="stylesheet" href="/SVTemplate/royalslider/royalslider.css">
-    <link rel="stylesheet" href="/SVTemplate/royalslider/skins/default/rs-default.css">
-    <link rel="stylesheet" href="/SVTemplate/css/normalize-opentype.css">
-    
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="/SVTemplate/css/ie8.css" />
-    <![endif]-->
-    <!--[if (gte IE 6)&(lte IE 8)]>
-		<link rel="stylesheet" type="text/css" href="/SVTemplate/css/hover.css">
-	<![endif]-->
-</head>
-<body dir="ltr" class=" ltr br-not-mobile br-not-IE br-WebKit inner-page listmode contentarticle">
-
-    
-    <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WWPN5T"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function (w, d, s, l, i) {
-w[l] = w[l] || []; w[l].push({
-'gtm.start':
-new Date().getTime(), event: 'gtm.js'
-}); var f = d.getElementsByTagName(s)[0],
-j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-WWPN5T');</script>
-<!-- End Google Tag Manager -->
-        
-    <script>
-        var baseUrl = 'http://localhost/tevapharm/';
     </script>
-
+    <script language="javascript1.2" src="/etc/designs/falcon/rwd/clientlibs_base/js/mbox.js"></script>
 
     
-    <div id="p-overlay"></div>
-    <form method="post" action="/research_development/rd_partnerships/patient_safety/" id="SVSrvForm1">
-<div class="aspNetHidden">
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYEZg9kFgICCA8WAh4HVmlzaWJsZWhkAgIPZBYEAgMPZBYCZg9kFgICAQ9kFgQCAQ8UKwACFgIeC18hSXRlbUNvdW50AgFkFgJmD2QWAgIBDxQrAAIWAh8BAgRkFghmD2QWAmYPFQUHIGdsb2JhbBkvdGV2YV93b3JsZHdpZGUvYW1lcmljYXMvBV9zZWxmDlRldmEgV29ybGR3aWRlAGQCAQ9kFgJmDxUFBiBzdG9jazIvP2NhdGlkPSU3QjQ2MDlBOTMyLUFDQ0ItNDFBMC04QTI0LTI2QzdENzNDNzRDOCU3RAVfc2VsZgVTdG9ja9kBPGRpdiBjbGFzcz0ncG9wLWJveCc+PElGUkFNRSBmcmFtZUJvcmRlcj0wIHNjcm9sbGluZz1ubyBkYXRhLXJlbD0iaHR0cDovL2lyMS5ldXJvaW52ZXN0b3IuY29tL2FzcC9pci90ZXZhcGhhcm1hY2V1dGljYWxpbmR1c3RyaWVzLzIwMTUvbWluaVF1b3RlLmFzcHgiPg0KICA8cD5Zb3VyIGJyb3dzZXIgZG9lcyBub3Qgc3VwcG9ydCBpZnJhbWVzLjwvcD4NCjwvSUZSQU1FPjwvZGl2PmQCAg9kFgJmDxUFAAwvY29udGFjdF91cy8FX3NlbGYKQ29udGFjdCBVcwBkAgMPZBYCZg8VBQAoaHR0cDovL3d3dy50ZXZhLmNvLmlsL1BhZ2VzL2RlZmF1bHQuYXNweAZfYmxhbmsGSGVicmV3AGQCAg9kFgICAQ8PZBYCHgtwbGFjZWhvbGRlcgUGU2VhcmNoZAIFD2QWBAIBDxYCHgRUZXh0BSg8aDIgY2xhc3M9InBhZ2UtdGl0bGUiPlBhcnRuZXJzaGlwczwvaDI+ZAIEDxYCHwBoZGSwvj3ImaA52mOKxf50PAZAYa+31LLOeszTbEHBF4bcRQ==" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['SVSrvForm1'];
-if (!theForm) {
-    theForm = document.SVSrvForm1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script src="/WebResource.axd?d=1CJeWhnerDSaoN2yD74ViNhUiNMe-fv5hYpE8evzSoOhnbIOzcb4iTojtkp6S93eXEeS20I4Sa0tIrXjEP7Ou807tKyIHDCfsqebHixCrDE1&amp;t=636125766551626262" type="text/javascript"></script>
-
-
-<script src="/ScriptResource.axd?d=4KTEh56EHBbf0LH-ibtscndN4kCzmD5mzuTJLuMftIRvgMF42jET2-EIfJmR-z2yhnSH_DXmhITAK0shaTUTF6Fnzc84u9Snja9O0m_Lr0wxbW29QSJBvzDKH1jeVTlqCYtYJgqUlPtkY4DqkGeb_CoP-VE-lSJGZx96DWF7L_sEJ_RsI7SDfy5Yc2HgNvr70&amp;t=4794f07b" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-//]]>
-</script>
-
-<script src="/ScriptResource.axd?d=DcLDjXOVn-G9_KhlQQ-yChZwKNvTY8h0XHBhAnWFOsvsquF2q0tidGbbTV1Nsc7sAL1BfBlsRZcSKsGu0lDxAHxtfWdZXsBWSuX1rLwXdzj0oiyWq522pmmjW8vH5_4OxMVZ8o4RzRw_RoAOqOzqY_hDkT9awgK9HTixSgyyRUEOgBPQGWV29LuHLvCIVpUu0&amp;t=4794f07b" type="text/javascript"></script>
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAdRd1+9mOqBc86SzmaDWVz+TaaQVlprhYFFNDOKKuKAYZIslcMthQVh31Z7IcBh6LVJyVnzXAVgqR1NuqW8IOcVCV35Vv7nxkm6E42X0Kn1W6QFUtRPoTq9+hIaY/yMcMqLW7UEjSf49jr40H5WWkk+tlGpdICPf20aw8VDBQwGsGhj6Qodl2p3zT0y+F+drIQ=" />
-</div>
-        <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl05', 'SVSrvForm1', [], [], [], 90, 'ctl00$ctl00');
-//]]>
-</script>
-
-        <section class="page-container menu-close">			
-            
-		    
-			  
-
-            
     
-    <section class="top-section" style="">
-        
+    
+
+    
+    
+
+    
+    
+        <!--[if IE]><link rel="shortcut icon" href="/etc/designs/falcon/favicon.ico"/><![endif]-->
+    
+    
+    
+
+    <link rel="icon" href="/etc/designs/falcon/favicon.ico"/>
+
+    
+
+    
+
+    
+
+    
+
+</head>
+    <body>
         
 
 
-<header class="header">
-    <div class="base-width">
-        <a class="logo" href="">
-            <img src='files/images/logo.png' alt='Teva Pharmaceutical Industries Ltd' />
-        </a><!--
-        --><section class="slogan">
-            Pharmaceutical Industries Ltd.
-            
-        </section><!--
-        --><nav id="ctlPageContentPlaceHeader_ctl00_top_nav" class="top-menu">
-                
-                <ul>
-                    
-                            
-                                    <li class="text-link global">
-                                        <a href='/teva_worldwide/americas/' target='_self'>Teva Worldwide</a>
-                                        
-                                    </li>
-                                
-                                    <li class="text-link stock">
-                                        <a href='/?catid=%7B4609A932-ACCB-41A0-8A24-26C7D73C74C8%7D' target='_self'>Stock</a>
-                                        <div class='pop-box'><IFRAME frameBorder=0 scrolling=no data-rel="http://ir1.euroinvestor.com/asp/ir/tevapharmaceuticalindustries/2015/miniQuote.aspx">
-  <p>Your browser does not support iframes.</p>
-</IFRAME></div>
-                                    </li>
-                                
-                                    <li class="text-link">
-                                        <a href='/contact_us/' target='_self'>Contact Us</a>
-                                        
-                                    </li>
-                                
-                                    <li class="text-link">
-                                        <a href='http://www.teva.co.il/Pages/default.aspx' target='_blank'>Hebrew</a>
-                                        
-                                    </li>
-                                
-                        
-                    <li class="search"><a href="#" class="search-toggle ficon"></a>
 
-					<div class="search-wrap"> 
-								<div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctlPageContentPlaceHeader_ctl00_textsearchbtn&#39;)">
-	
-							
-                                <input name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl00$textsearchinput" type="text" id="ctlPageContentPlaceHeader_ctl00_textsearchinput" class="search-field" placeholder="Search" />
-							
-                                <input type="submit" name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl00$textsearchbtn" value="s" id="ctlPageContentPlaceHeader_ctl00_textsearchbtn" class="ficon search-btn" />
-                                
-</div>
-                        
+        
+<div class="container" id="product-page-template">
+    <div class="root responsivegrid">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="primaryNavigation aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<header class="nav-primary-wrapper" role="banner">
+	<div class="skip-to-content hidden-xs hidden-sm">
+        <nav class="container" role="presentation">
+            <a href="#main-content">Skip to main content</a>
+        </nav>
+    </div>
+    <nav class="nav-primary" role="navigation" aria-label="primary" style="opacity:0;">
+        <div class="container top-nav-container">
+            <ul class="nav justify-content-center top-nav">  
+
+				<div class="left-menu-mobile initial-state">
+					<div class="toggle-button-wrapper hidden-md">
+						<button type="button" aria-label="Toggle Button" class="navbar-toggle" id="mobile-menu-toggle-button" tabindex="0">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<i class="fa fa-times close-icon"></i>
+						</button>
+						<div class="clearfix"></div>
 					</div>
-					</li><!--
-                    --><li class='social linked'><a onclick="ga('send', 'event', 'LinkedIn', 'Click', 'Header');" href='https://www.linkedin.com/company/5239?trk=tyah&trkInfo=tarId%3A1421348704576%2Ctas%3Ateva%20pharmaceuticals%2Cidx%3A2-1-4' target="_blank" class='ficon'></a></li><!--
-                    --><li class='social google'><a onclick="ga('send', 'event', 'Google+', 'Click', 'Header');" href='https://plus.google.com/+tevapharm/about' target="_blank" class='ficon'></a></li><!--
-                    --><li class='social facebook'><a onclick="ga('send', 'event', 'Facebook', 'Click', 'Header');" href='https://www.facebook.com/tevapharm' target="_blank" class='ficon'></a></li>
-                </ul>
-
-           </nav><div class="mobile-menu-toggle"><span></span></div>
-            
-        </div>
+					<div class="mobile-menu hidden-md">
+						<div class="shadow-mask"></div>
+						<ul class="mobile-nav">
+							<li class="mobile-menu-label">Menu</li>
+							
+													
+									
+										<li class="nav-item mobile-menu-item main-nav-item" role="menu">
+											<a href="javascript:void(0);">
+												Insurance
+											</a>
+											<button type="button" class="open-sub-menu ">
+												<i class="fa fa-angle-right" aria-hidden="true"></i>
+												<span class="sr-only">Opens submenu</span>
+											</button>
+											<div class="mobile-menu mobile-sub-menu  hidden-md initial-state">
+												<ul class="mobile-nav mobile-sub-nav">
+													<li class="mobile-menu-label mobile-sub-menu-label">
+														<span class="triangle back-arrow" aria-hidden="true"></span>
+														<button type="button">Back</button>
+													</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/auto/" data-gtm="Farmers_HP_MainNav_AutoIcon">Auto</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/home/" data-gtm="Farmers_HP_MainNav_HomeIcon">Home</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/life/" data-gtm="Farmers_HP_MainNav_LifeIcon">Life</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/business/" data-gtm="Farmers_HP_MainNav_BusinessIcon">Business</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/recreational/" data-gtm="Farmers_HP_MainNav_RecreationalIcon">Recreational</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/motorcycle/" data-gtm="Farmers_HP_MainNav_MotorcycleIcon">Motorcycle</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/umbrella/" data-gtm="Farmers_HP_MainNav_UmbrellaIcon">Umbrella</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/financial/" data-gtm="Farmers_HP_MainNav_Financial">Financial Products</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/pet-insurance/" data-gtm="Farmers_HP_MainNav_PetInsurance">Pet Insurance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/renters/" data-gtm="Farmers_HP_MainNav_Renters">Renters Insurance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/insurance/" data-gtm="Farmers_HP_MainNav_BrowseProducts">Browse all products</a>
+														</li>
+													
+												</ul>
+											</div>
+										</li>
+									
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://www.farmers.com/quote/ffq/landingpage.jsf" data-gtm="Farmers_HP_Quote_MainNav">Get a quote</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://agents.farmers.com/search.html" data-gtm="Farmers_HP_Agents_MainNav">Find an agent</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+													
+									
+										<li class="nav-item mobile-menu-item main-nav-item" role="menu">
+											<a href="javascript:void(0);">
+												Claims
+											</a>
+											<button type="button" class="open-sub-menu ">
+												<i class="fa fa-angle-right" aria-hidden="true"></i>
+												<span class="sr-only">Opens submenu</span>
+											</button>
+											<div class="mobile-menu mobile-sub-menu  hidden-md initial-state">
+												<ul class="mobile-nav mobile-sub-nav">
+													<li class="mobile-menu-label mobile-sub-menu-label">
+														<span class="triangle back-arrow" aria-hidden="true"></span>
+														<button type="button">Back</button>
+													</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_MainNav_ReportClaimIcon">Report a Claim</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="https://pet1-farmers.cs40.force.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_HP_MainNav_ViewClaimIcon">View Claim Status</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_MainNav_RoadsideAssistanceClaimIcon">Roadside Assistance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/catastrophe/" data-gtm="Farmers_HP_MainNav_CatastropheCenterIconClaimIcon">Catastrophe Centre</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/" data-gtm="Farmers_HP_MainNav_ViewClaimLink">View Claim Overview</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/auto-claims/" data-gtm="Farmers_HP_MainNav_AutoClaimIcon">Auto Claims</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/property-claims/" data-gtm="Farmers_HP_MainNav_PropertyClaimIcon">Property Claims</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/business-claims/" data-gtm="Farmers_HP_MainNav_BusinessClaimsClaimLink">Business Claims</a>
+														</li>
+													
+												</ul>
+											</div>
+										</li>
+									
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="/payments/" data-gtm="Farmers_HP_PayBill_MainNav">Pay bill</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Register_MainNav">Register</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+						</ul>
+					</div>
+				</div>
+                    
+				
+					
+						
+							<li class="nav-item main-nav-item desktop-menu-item hidden-xs hidden-sm" role="menu">
+								<a href="javascript:void(0);" data-gtm="Farmers_HP_Insurance_MainNav">
+									Insurance
+									<span class="sr-only">Opens submenu</span>
+								</a>
+								<div class="sub-menu insurance-nav initial-state" aria-hidden="true">
+									<div class="shadow-mask"></div>
+									<div class="container">
+										<div class="row">
+											<div class="sub-menu-left">
+												<ul>
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/auto/" data-gtm="Farmers_HP_MainNav_AutoIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/auto.svg" class="img-responsive" alt="Car icon"/>
+															Auto
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/home/" data-gtm="Farmers_HP_MainNav_HomeIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/home.svg" class="img-responsive" alt="Car icon"/>
+															Home
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/life/" data-gtm="Farmers_HP_MainNav_LifeIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/life.svg" class="img-responsive" alt="Car icon"/>
+															Life
+														</a>
+														<a href="#fat-footer_2" class="footnote-life">
+															<span class="sr-only">footnote</span>&#185;
+														</a>
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/business/" data-gtm="Farmers_HP_MainNav_BusinessIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/business-property.svg" class="img-responsive" alt="Car icon"/>
+															Business
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/recreational/" data-gtm="Farmers_HP_MainNav_RecreationalIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/recreational-boat.svg" class="img-responsive" alt="Car icon"/>
+															Recreational
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/motorcycle/" data-gtm="Farmers_HP_MainNav_MotorcycleIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/motorcycle.svg" class="img-responsive" alt="Car icon"/>
+															Motorcycle
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/umbrella/" data-gtm="Farmers_HP_MainNav_UmbrellaIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/umbrella.svg" class="img-responsive" alt="Car icon"/>
+															Umbrella
+														</a>
+														
+													</li>
+												
+													
+												
+													
+												
+													
+												
+													
+												</ul>
+											</div>
+											<div class="sub-menu-right">
+											 <div class="left-submenu-border">
+												<ul>
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													<li class="sub-menu-item">
+														<a href="/financial/" data-gtm="Farmers_HP_MainNav_Financial">Financial Products</a>									
+														<a href="#fat-footer_2" class="footnote">
+															<span class="sr-only">footnote</span>*
+														</a>
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/pet-insurance/" data-gtm="Farmers_HP_MainNav_PetInsurance">Pet Insurance</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/renters/" data-gtm="Farmers_HP_MainNav_Renters">Renters Insurance</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/insurance/" data-gtm="Farmers_HP_MainNav_BrowseProducts">Browse all products</a>									
+														
+													</li>
+												</ul>
+											 </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://www.farmers.com/quote/ffq/landingpage.jsf" data-gtm="Farmers_HP_Quote_MainNav">Get a quote</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://agents.farmers.com/search.html" data-gtm="Farmers_HP_Agents_MainNav">Find an agent</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+								<li class="nav-item main-nav-item logo-item hidden-xs hidden-sm">
+									<a href="/" class="no-underline" target="_self">
+                                        <img data-imageurl="/content/dam/farmers/marketing/digital/aem/images/misc/farmers-ins-logo.svg" alt="Farmers Insurance Home Page" class="logo-nav desktop-logo" title="Farmers Insurance Home Page"/>
+									</a>
+								</li>
+								<li class="nav-item main-nav-item logo-item hidden-md">
+									<a href="/" class="no-underline" target="_self">
+                                        <img data-imageurl="/content/dam/farmers/marketing/digital/aem/images/misc/farmers-mobile-logo.svg" alt="Farmers Insurance Mobile Home Page" class="logo-nav mobile" title="Farmers Insurance Mobile Home Page"/>
+									</a>
+								</li>
+							
+							
+						
+					
+				
+					
+						
+							<li class="nav-item main-nav-item desktop-menu-item hidden-xs hidden-sm" role="menu">
+								<a href="javascript:void(0);" data-gtm="Farmers_HP_Claims_MainNav">
+									Claims
+									<span class="sr-only">Opens submenu</span>
+								</a>
+								<div class="sub-menu insurance-nav initial-state" aria-hidden="true">
+									<div class="shadow-mask"></div>
+									<div class="container">
+										<div class="row">
+											<div class="sub-menu-left">
+												<ul>
+													<li role="menuitem" class="sub-menu-item">
+														<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_MainNav_ReportClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/report-claim.svg" class="img-responsive" alt="Car icon"/>
+															Report a Claim
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="https://pet1-farmers.cs40.force.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_HP_MainNav_ViewClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/view-claim-status.svg" class="img-responsive" alt="Car icon"/>
+															View Claim Status
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_MainNav_RoadsideAssistanceClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/towing-1.svg" class="img-responsive" alt="Car icon"/>
+															Roadside Assistance
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/catastrophe/" data-gtm="Farmers_HP_MainNav_CatastropheCenterIconClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/catastrophe-center.svg" class="img-responsive" alt="Car icon"/>
+															Catastrophe Centre
+														</a>
+														
+													</li>
+												
+													
+												
+													
+												
+													
+												
+													
+												</ul>
+											</div>
+											<div class="sub-menu-right">
+											 <div class="left-submenu-border">
+												<ul>
+													
+												
+													
+												
+													
+												
+													
+												
+													<li class="sub-menu-item">
+														<a href="/claims/" data-gtm="Farmers_HP_MainNav_ViewClaimLink">View Claim Overview</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/auto-claims/" data-gtm="Farmers_HP_MainNav_AutoClaimIcon">Auto Claims</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/property-claims/" data-gtm="Farmers_HP_MainNav_PropertyClaimIcon">Property Claims</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/business-claims/" data-gtm="Farmers_HP_MainNav_BusinessClaimsClaimLink">Business Claims</a>									
+														
+													</li>
+												</ul>
+											 </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="/payments/" data-gtm="Farmers_HP_PayBill_MainNav">Pay bill</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Register_MainNav">Register</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+								<li class="nav-item main-nav-item desktop-menu-item">
+									<a href="/search/" aria-label="Search" data-gtm="Farmers_HP_Search_MainNav">
+										<i class="fa fa-search no-margin"></i>
+									</a>
+								</li>
+							
+							
+							
+							
+						
+					
+				
+					
+						
+						
+							
+							
+								<li class="nav-item main-nav-item desktop-menu-item	">
+									<a href="/login/" aria-label="Log In" data-gtm="Farmers_HP_Login_MainNav">
+										<i class="fa fa-user no-margin"></i>&nbsp;&nbsp;
+										Log in
+									</a>
+								</li>
+							
+							
+							
+						
+					
+				
+            </ul>
+		</div>
+    </nav>
 </header>
 
-    <section class="dd-global-list">
-        <div class="base-width">
-            <span class="dd-global-close"></span>
-            <h2 class='dd-main-title'>See Teva's sites around the world</h2>
-            <section class="dd-col america-col cf">
-                <h3 class="dd-col-title"><a href="teva_worldwide/americas/">Americas</a></h3>
-                <UL>
-<LI><A href="http://www.tevacanada.com" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0002_canada.png"></SPAN><SPAN>Canada</SPAN></A></LI>
-<LI><A href="teva_worldwide/americas/teva_in_curacao/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0004_curacao.png"></SPAN><SPAN>Curacao</SPAN></A></LI>
-<LI><A href="http://www.tevausa.com" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0000_Layer-1.png"></SPAN><SPAN>United States</SPAN></A></LI></UL>
-            </section><!--
-            --><section class="dd-col emia-col cf">
-                <h3 class="dd-col-title">Growth Markets</h3>
-                <UL>
-<LI><A href="http://www.ivax.com.ar" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0008_argentina.png"></SPAN><SPAN>Argentina</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_australia/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0022_Australia.png"></SPAN><SPAN>Australia</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_belarus/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0018_belarus.png"></SPAN><SPAN>Belarus</SPAN></A></LI>
-<LI><A href="http://www.tevabrasil.com.br" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0005_brazil.png"></SPAN><SPAN>Brazil</SPAN></A></LI>
-<LI><A href="http://www.laboratoriochile.cl/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0007_chile.png"></SPAN><SPAN>Chile</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_china/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0014_china.png"></SPAN><SPAN>China</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_india/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0021_India.png"></SPAN><SPAN>India</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_israel/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0017_israel.png"></SPAN><SPAN>Israel</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_kazakhstan/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0013_Kazakhtan.png"></SPAN><SPAN>Kazakhstan</SPAN></A></LI>
-<LI><A href="http://www.tevamexico.com" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0001_mexico.png"></SPAN><SPAN>Mexico</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_peru/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0006_peru.png"></SPAN><SPAN>Peru</SPAN></A></LI>
-<LI><A href="http://www.teva.ru" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0020_Russia.png"></SPAN><SPAN>Russia</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_singapore/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0016_singapore.png"></SPAN><SPAN>Singapore</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_south_africa/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/home_page/plasma/170215/_0012_south_africa.png"></SPAN><SPAN>South Africa</SPAN></A></LI>
-<LI><A href="http://www.teva.com.tr" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/home_page/plasma/170215/_0019_turkey.png"></SPAN><SPAN>Turkey</SPAN></A></LI>
-<LI><A href="http://www.teva.ua" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/home_page/plasma/170215/_0015_ukraine.png"></SPAN><SPAN>Ukraine</SPAN></A></LI>
-<LI><A href="http://www.teva.com.uy" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0003_uruguay.png"></SPAN><SPAN>Uruguay</SPAN></A></LI>
-<LI><A href="teva_worldwide/growth_markets/teva_in_uzbekistan/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/home_page/plasma/170215/_0011_uzbekistan.png"></SPAN><SPAN>Uzbekistan</SPAN></A></LI></UL>
-            </section><!--
-            --><section class="dd-col japan-col cf">
-                <h3 class="dd-col-title">Japan & S. Korea</h3>
-                <UL>
-<LI><A href="http://www.teva-group.jp/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0010_japan.png"></SPAN><SPAN>Japan</SPAN></A></LI>
-<LI><A href="teva_worldwide/asia/teva_in_south_korea/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0009_south-korea.png"></SPAN><SPAN>South Korea</SPAN></A></LI></UL>
-            </section><!--
-            --><section class="dd-col europe-col cf">
-                <h3 class="dd-col-title">Europe</h3>
-                <UL>
-<LI><A href="teva_worldwide/europe/"><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/EU_flag.jpg"></SPAN><SPAN>Europe</SPAN></A></LI>
-<LI><A href="http://www.tevapharm.at" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0052_Austria.png"></SPAN><SPAN>Austria</SPAN></A></LI>
-<LI><A href="http://www.tevabelgium.be" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0041_Belgium.png"></SPAN><SPAN>Belgium</SPAN></A></LI>
-<LI><A href="http://www.pliva.ba" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0031_Bosnia.png"></SPAN><SPAN>Bosnia &amp; Herzegovina</SPAN></A></LI>
-<LI><A href="http://www.teva.bg" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0051_bulgaria.png"></SPAN><SPAN>Bulgaria</SPAN></A></LI>
-<LI><A href="http://www.pliva.hr" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0040_Croatia.png"></SPAN><SPAN>Croatia</SPAN></A></LI>
-<LI><A href="http://www.teva.cz" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0030_czech.png"></SPAN><SPAN>Czech Republic</SPAN></A></LI>
-<LI><A href="http://www.tevapharm.dk" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0050_Denmark.png"></SPAN><SPAN>Denmark</SPAN></A></LI>
-<LI><A href="http://www.teva.ee" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0039_Estonia.png"></SPAN><SPAN>Estonia</SPAN></A></LI>
-<LI><A href="http://ratiopharm.fi/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0029_finland.png"></SPAN></SPAN><SPAN>Finland</SPAN></A></LI>
-<LI><A href="http://www.teva-france.fr" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0049_france.png"></SPAN><SPAN>France</SPAN></A></LI>
-<LI><A href="http://www.teva.de" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0038_germany.png"></SPAN><SPAN>Germany</SPAN></A></LI>
-<LI><A href="teva_worldwide/europe/teva_in_greece/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/flags/greece-flags_1.png"></SPAN><SPAN>Greece</SPAN></A></LI>
-<LI><A href="http://www.teva.hu" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0048_Hungary.png"></SPAN><SPAN>Hungary</SPAN></A></LI>
-<LI><A href="http://www.teva.ie" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0037_Ireland.png"></SPAN><SPAN>Ireland</SPAN></A></LI>
-<LI><A href="http://www.tevaitalia.it" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0028_italy.png"></SPAN><SPAN>Italy</SPAN></A></LI>
-<LI><A href="http://www.teva.lv" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0047_Latvia.png"></SPAN><SPAN>Latvia</SPAN></A></LI>
-<LI><A href="http://www.teva.lt" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0036_Lithunia.png"></SPAN><SPAN>Lithuania</SPAN></A></LI>
-<LI><A href="http://www.pliva.com.mk" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0027_Macedonia.png"></SPAN><SPAN>Macedonia</SPAN></A></LI>
-<LI><A href="teva_worldwide/europe/teva_in_monaco/" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0046_Monaco.png"></SPAN><SPAN>Monaco</SPAN></A></LI>
-<LI><A href="http://www.tevapharmachemie.com" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0035_Netherlands.png"></SPAN><SPAN>Netherlands</SPAN></A></LI>
-<LI><A href="http://www.tevapharm.no" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0026_Norway.png"></SPAN><SPAN>Norway</SPAN></A></LI>
-<LI><A href="http://www.teva.pl" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0045_Poland.png"></SPAN><SPAN>Poland</SPAN></A></LI>
-<LI><A href="http://www.teva.pt" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0034_Portugal.png"></SPAN><SPAN>Portugal</SPAN></A></LI>
-<LI><A href="http://www.tevapharm.ro" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0025_Romania.png"></SPAN><SPAN>Romania</SPAN></A></LI>
-<LI><A href="http://www.teva.rs" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0044_Serbia.png"></SPAN><SPAN>Serbia</SPAN></A></LI>
-<LI><A href="http://www.teva.sk" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0033_Slovakia.png"></SPAN><SPAN>Slovakia</SPAN></A></LI>
-<LI><A href="http://www.tevasi.si" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0024_Slovenia.png"></SPAN><SPAN>Slovenia</SPAN></A></LI>
-<LI><A href="http://www.tevapharma.es" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/spain_small_1.jpg"></SPAN><SPAN>Spain</SPAN></A></LI>
-<LI><A href="http://www.teva.se" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0032_Sweden.png"></SPAN><SPAN>Sweden</SPAN></A></LI>
-<LI><A href="http://www.tevapharma.ch" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0023_switzerland.png"></SPAN><SPAN>Switzerland</SPAN></A></LI>
-<LI><A href="http://www.tevauk.com" target=_blank><SPAN><IMG title="" border=0 alt="" data-url="files/country/hp_flags/_0042_uk.png"></SPAN><SPAN>United Kingdom</SPAN></A></LI></UL></SPAN>
-            </section>
-            <div class="global-list-toggle">
-                <span class="see-all">See All</span>
-                <span class="see-less">See Less</span>
-            </div>
-            <div class='dd-desc'>Want to find out more about Teva's locations and phone numbers? <A href="teva_worldwide/americas/">Visit Teva Worldwide</A></div>
+<section class="container main-content-demo initial-state" id="main-content"> 
+</section>
+</div>
+<div class="hero-dynamic aem-GridColumn aem-GridColumn--default--12"><div class="preview-height">
+<section class="hero-banner">
+    <div class="desktop-wrapper">
+		<div><!-- /*
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/ -->
+
+    
+    
+<link rel="stylesheet" href="/libs/dam/components/scene7/dynamicmedia/clientlibs/dynamicmedia.css" type="text/css">
+<script type="text/javascript" src="/libs/dam/components/scene7/common/clientlibs/viewer.js"></script>
+<script type="text/javascript" src="/libs/dam/components/scene7/dynamicmedia/clientlibs/dynamicmedia.js"></script>
+<script type="text/javascript" src="/libs/dam/components/scene7/common/clientlibs/i18n.js"></script>
+
+
+
+    <!-- /* Viewer container when there is an asset */ -->
+	<div class="cq-dd-image ">
+        <div id="dynamicmedia_desktop" data-current-page="/content/falcon/en/index/claims" data-page-locale="en" data-asset-path="farmers/Claims-Landing-Page-r2-3000x1050" data-asset-type="image" data-viewer-path="/etc/dam/viewers/s7viewers/" data-imageserver="https://s7d2.scene7.com/is/image/" data-videoserver="https://s7d2.scene7.com/is/content/" data-contenturl="/" data-wcmdisabled data-breakpoints="2000, 768" data-viewermodifiers="2000,768" data-linktarget="_self" class="s7dm-dynamic-media">
         </div>
-    </section>
+    </div>
+    <!-- /* Placeholder when there is no content */ -->
+	
 
 
-<script>
-    $('.pop-box').each(function (index, element) {
-        $(element).prev('a').addClass('pop-box-toggle');
-    });
 
-    $('.pop-box-toggle').click(function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if ($('header .global').hasClass('open'))
-            $('header .global').click();
-        var popupIframe = $(this).next('.pop-box').find('iframe');
-        var popupIframeSrc = popupIframe.attr('src');
-        if (popupIframe.length > 0 && typeof popupIframeSrc == typeof undefined || popupIframeSrc == false) {
-            iframelink = popupIframe.attr('data-rel');
-            popupIframe.attr('src', iframelink);
-        }
-        $(this).toggleClass('pop-box-open');
-        if ($('body').hasClass('br-IE8')) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).next('.pop-box').slideToggle();
-            //$(this).closest('.header')
-        }
-        $(this).blur();
-        
-        
-    });
+</div>
+	</div>
+	<div class="mobile-wrapper">
+		<div><!-- /*
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
 
-    $('.dd-col.europe-col li:nth-child(3n+1)').addClass('first-in-row');
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/ -->
 
-    $('.see-all').click(function () {
-        $(this).hide();
-        $('.see-less').show();
-        $('.dd-col').addClass('see-all');
-    });
-
-    $('.see-less').click(function () {
-        $(this).hide();
-        $('.see-all').show();
-        $('.dd-col').removeClass('see-all');
-    });
-
-
-    $('header .global').click(function (e) {
-        if ($('body').hasClass('br-IE8')) {
-            e.preventDefault();
-            e.stopPropagation();
-            if ($('header .pop-box-toggle').hasClass('pop-box-open'))
-                $('header .pop-box-toggle').click();
-            $(this).find('a').blur();
-            $(this).toggleClass('open').closest('header').toggleClass('dd-open').next('.dd-global-list').slideToggle();
-            //$(this).closest('.header')
-        } else {
-            if ($('header .pop-box-toggle').hasClass('pop-box-open'))
-                $('header .pop-box-toggle').click();
-            $(this).find('a').blur();
-            $(this).toggleClass('open').parents('header').toggleClass('dd-open');
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-
-
-    $('.top-menu .search-wrap input').keypress(function (event) {
-        if (event.keyCode == 13) {
-            $('.top-menu .search-btn').click();
-        }
-    });
-
+    
     
 
 
 
-    $('.dd-global-list').click(function (e) { e.stopPropagation(); });
-
-    $('.dd-global-close').click(function () {
-        $('header .global').removeClass('open');
-        $('header').removeClass('dd-open');
-        if ($('body').hasClass('br-IE8')) {
-            $(this).closest('.dd-global-list').slideUp();
-        }
-    });
-
-    $(".header .global, .pop-box-toggle").keypress(function () {
-        if (event.which == 13) { // enter
-            $(this).click();
-            e.stopPropagation();
-
-        }
-    });
-
-    $('.top-menu .search-submit').click(function (e) {
-
-        
-        if ($(this).next('.search-field-wrap').fund('input[type=search]').val().length == 0) {
-            e.preventDefault();
-        }
-    });
-
-    $(document).keyup(function (e) {
-        if (e.keyCode == 27) {
-            if ($('.pop-box-toggle').hasClass('pop-box-open'))
-                $('.pop-box-toggle').removeClass('pop-box-open');
-            if ($('header .global').hasClass('open'))
-                $('.dd-global-close').click();
-            //$('.cancel').click();
-        }   // esc
-    });
+    <!-- /* Viewer container when there is an asset */ -->
+	<div class="cq-dd-image ">
+        <div id="dynamicmedia_mobile" data-current-page="/content/falcon/en/index/claims" data-page-locale="en" data-asset-path="farmers/Claims-Landing-Page-2000x1504" data-asset-type="image" data-viewer-path="/etc/dam/viewers/s7viewers/" data-imageserver="https://s7d2.scene7.com/is/image/" data-videoserver="https://s7d2.scene7.com/is/content/" data-contenturl="/" data-wcmdisabled data-breakpoints="480" data-linktarget="_self" class="s7dm-dynamic-media">
+        </div>
+    </div>
+    <!-- /* Placeholder when there is no content */ -->
+	
 
 
-    $('.text-link.stock .pop-box-toggle').attr("onclick", "ga('send', 'event', 'Stock Performance', 'Click', 'Header');");
+
+</div>
+	</div>
+	<div class="container">
+		<div class="banner-content">
+			<p class="heading">Farmers<sup>®</sup> Claim Services</p>
+			<p class="para"></p>
+			<div class="cta-wrapper">
+				
+					  <a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" class="button-cta button-cross-sell" data-gtm=" Farmers_Claims_ReportAClaimButton_Hero">Report a claim</a>
+				
+					  <a href="https://www.farmers.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" class="button-cta button-secondary" data-gtm="Farmers_Claims_ViewClaimStatusButton_Hero">View claim status</a>
+				
+		   </div>
+	   </div>
+	</div>
+</section>
+</div>
+
+
+    
+</div>
+<div class="responsivegrid full-width aem-GridColumn--default--hide aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0">
+<div class="aem-Grid aem-Grid--12 ">
+    
+    <div class="secondaryNavigation aem-GridColumn--default--hide aem-GridColumn aem-GridColumn--offset--default--0"><nav></nav>
+
+
+    
+
+<div class="nav-secondary">
+	<section class="sticky-header">
+		<div class="container">
+		  <div class="row">
+		  <div class="heading"><span>Claims</span> <i class="fa fa-angle-down"></i></div>
+		  <div class="logo"><img src="/content/dam/farmers/marketing/digital/aem/images/misc/farmers-logo2.png" alt="Farmers Logo"></div>
+		  <div class="cta-wrapper">
+			 
+				<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_Claims_ReportAClaimButton_Subnav" class="button-cta button-cross-sell mobile-cta">REPORT A CLAIM</a>
+			 
+				<a href="https://www.farmers.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_Claims_ViewClaimStatusButton_Subnav" class="button-cta button-secondary ">VIEW CLAIM STATUS</a>
+			 
+		  </div>
+		  </div>
+		</div>
+	</section>
+	<section class="business-nav">
+		 <button class="close d-none d-sm-block">×</button>
+		 <div class="container">
+			<div class="row">
+			   <ul>
+			   
+				  <li><a href="https://www.farmers.com/claims/" data-gtm="Farmers_ParentClaims_ClaimServicesLink_Subnav">Claims</a></li>
+				  
+				  
+				  
+				  
+					 <li><a href="https://www.farmers.com/claims/roadside-assistance/" data-gtm="Farmers_ParentClaims_Towing&amp;RoadsideAssitanceLink_Subnav">Towing &amp; Roadside Assistance</a></li>
+				  		  
+				
+				  
+				  
+				  <li class="menu">
+                      <a href="javascript:void(0);">Auto Claims <i class="fa fa-angle-down"></i></a>
+					 <div class="business-menu">
+						<div class="container">
+						   <ul class="">
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/" data-gtm="Farmers_ParentClaims_AutoClaimsLink_Subnav">Auto Claims</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/auto-accident-repair/" data-gtm="Farmers_ParentClaims_AutoRepairsLink_Subnav">Auto Repairs</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/auto-glass-repair/" data-gtm="Farmers_ParentClaims_AutoRepairsLink_Subnav">Glass Repairs</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/auto-claim-process/" data-gtm="Farmers_ParentClaims_AutoClaimsProcessLink_Subnav">Auto Claims Process</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/car-accident-checklist/" data-gtm="Farmers_ParentClaims_CarAccidentChecklistLink_Subnav">Car Accident Checklist</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/auto-claims/total-loss/" data-gtm="Farmers_ParentClaims_TotalLossClaimsLink_Subnav">Total Loss Claims    </a></li>
+							 
+						   </ul>
+						</div>
+					 </div>
+				  </li>
+				  
+				  		  
+				
+				  
+				  
+				  <li class="menu">
+                      <a href="javascript:void(0);">Property Claims <i class="fa fa-angle-down"></i></a>
+					 <div class="business-menu">
+						<div class="container">
+						   <ul class="">
+							 
+							  <li><a href="https://www.farmers.com/claims/property-claims/" data-gtm="Farmers_ParentClaims_PropertyClaimsLink_Subnav">Property Claims</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/property-claims/property-repairs/" data-gtm="Farmers_Parent Claims_PropertyRepairsLink_Subnav">Property Repairs </a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/property-claims/claims-process/" data-gtm="Farmers_ParentClaims_PropertyClaimsProcess_Subnav">Property Claims Process </a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/property-claims/fire-and-water-damage/" data-gtm="Farmers_ParentClaims_WaterDamageLink_Subnav">Water Damage</a></li>
+							 
+						   </ul>
+						</div>
+					 </div>
+				  </li>
+				  
+				  		  
+				
+				  
+				  
+				  <li class="menu">
+                      <a href="javascript:void(0);">More Types of Claims <i class="fa fa-angle-down"></i></a>
+					 <div class="business-menu">
+						<div class="container">
+						   <ul class="">
+							 
+							  <li><a href="https://www.farmers.com/claims/business-claims/" data-gtm="Farmers_ParentClaims_BusinessClaimsLink_Subnav">Business </a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/business-claims/workers-compensation-ppo/" data-gtm="Farmers_ParentClaims_WorkersCompensationClaimsLink_Subnav">Workers Compensation </a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/medical-claims/" data-gtm="Farmers_ParentClaims_MedicalClaimsLink_Subnav">Medical</a></li>
+							 
+							  <li><a href="https://www.farmers.com/claims/recreational-claims/" data-gtm="Farmers_ParentClaims_RecreationalVehicleClaimsLink_Subnav">Recreational Vehicle</a></li>
+							 
+						   </ul>
+						</div>
+					 </div>
+				  </li>
+				  
+				  		  
+				
+				  
+				  
+				  
+					 <li><a href="https://www.farmers.com/catastrophe/" data-gtm="Farmers_ParentClaims_CatastropheLink_Subnav">Catastrophe</a></li>
+				  		  
+				
+
+				
+			   </ul>
+			</div>
+		 </div>
+	</section>
+</div></div>
+<div class="breadcrumb aem-GridColumn--default--hide aem-GridColumn aem-GridColumn--offset--default--0">
+<div class="breadcrumb d-block d-sm-none">
+   <ul>
+    <li><a href="/">
+            Farmers</a>
+		<i class="fa  fa-angle-right"></i>
+    </li>
+   
+    <li>
+            Claims
+		
+    </li>
+   </ul>
+</div>
+
+    
+
+
+</div>
+<div class="responsivegrid full-width aem-GridColumn--default--hide aem-GridColumn aem-GridColumn--offset--default--0">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmerscontainer aem-GridColumn aem-GridColumn--default--12"><div class="container">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h1>Claim Services</h1>
+
+</div> 
+
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+<div class="column-control" style="margin-bottom:0px;">
+	<div class="container">
+    	<div class="row">
+             
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-4 col-12 left" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>Report a claim online</h3>
+
+</div> 
+
+</div>
+<div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/falcon/content-images/photo/claims/report-a-claim-online.png" alt="Report a claim online" title="Report a claim online"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <p><br />
+A convenient way to report losses while at home or on the go.</p>
+
+</div> 
+
+</div>
+<div class="farmersbutton aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_Claims_ReportAClaimBody_button" class="button-cta button-cross-sell desktop">Report a claim</a>
+<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_Claims_ReportAClaimBody_button" class="button-cta button-cross-sell mobile">Report a claim</a>
+</div>
+
+    
+</div></div>
+                    </div>
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-4 col-12 left" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>View claim status</h3>
+
+</div> 
+
+</div>
+<div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/farmers/marketing/digital/aem/images/claims/report-a-claim-online-256.png"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <p><br />
+Check the status of or get help with an existing claim.</p>
+
+</div> 
+
+</div>
+<div class="farmersbutton aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<a href="https://www.farmers.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_Claims_ViewClaimBody_button" class="button-cta button-secondary desktop">View claim status</a>
+<a href="https://www.farmers.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_Claims_ViewClaimBody_button" class="button-cta button-secondary mobile">View claim status</a>
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <p><br />
+<a href="https://www.farmers.com/eFNOL/claimstatusportal?#/findrep?SO=01" data-gtm="Farmers_Claims_FindRepBody_link">Find my claim representative</a></p>
+<p><a href="https://www.farmers.com/eFNOL/claimstatusportal?#/sendPhotosDocs" data-gtm="Farmers_Claims_SendDocsBody_link">Send us documents</a><br />
+<br />
+</p>
+
+</div> 
+
+</div>
+
+    
+</div></div>
+                    </div>
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-4 col-12 left" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>Live chat</h3>
+
+</div> 
+
+</div>
+<div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/farmers/marketing/digital/aem/images/claims/chat-with-a-claims-rep-256.png" alt="Live chat" title="Live chat"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <p><br />
+Do you have a claims related question?  Chat with a representative to get help. </p>
+<p><b>Chat is available 8:00am – 9:00 pm CST. </b><br />
+</p>
+
+</div> 
+
+</div>
+<div class="claimschatbutton aem-GridColumn aem-GridColumn--default--12"><!-- Claims Chat Button -->
+<script type='text/javascript' src='https://c.la1-c2cs-iad.salesforceliveagent.com/content/g/js/44.0/deployment.js'></script>
+<script type='text/javascript'>
+	// F.com default values
+	var SO = '99';
+    var caseno = '';
+    var PolicyNo = '';    
+    var pageName = 'FARMERS.COM';
+
+    // Identify hostname
+    var hostname = window.location.hostname;
+    hostname = hostname.substring(0, 3);
+    if ( hostname == 'www' ) {
+		var buttonID = '57233000000PBAB';
+        var deploymentID = '00DE0000000f0YX';
+        var deploymentCode = 'https://c.la1-c2cs-iad.salesforceliveagent.com/content/g/js/44.0/deployment.js';
+        var initCode = 'https://d.la1-c1-iad.salesforceliveagent.com/chat';
+    } else {
+		var buttonID = '572c000000000Em';
+        var deploymentID = '00Dc0000003oVZl';
+        var deploymentCode = 'https://c.la1-c2cs-iad.salesforceliveagent.com/content/g/js/40.0/deployment.js';
+        var initCode = 'https://d.la1-c2cs-iad.salesforceliveagent.com/chat';
+	}
+
+	//Set liveagent
+	liveagent.addCustomDetail("Claim Number", caseno) ;
+    liveagent.addCustomDetail("SO", SO);
+    liveagent.addCustomDetail("Case Subject", "Policy-"+''+" Case-"+caseno);
+    liveagent.addCustomDetail("Chat Type", pageName);
+    liveagent.findOrCreate("Case").map("Claim_Number__c", "Claim Number", true, true, true).showOnCreate().map("Chat_Type__c", "Chat Type", true, true, true).saveToTranscript("caseId");
+
+    liveagent.init(initCode, buttonID, deploymentID);
 </script>
 
-        
-        
-
-<nav class="main-menu">
-    <div class="main-menu-wrap cf">
-        <a class="fix-menu-item logo" href="http://www.tevapharm.com/">
-            <img src='files/images/logo.png' alt='Teva Pharmaceutical Industries Ltd' />
-        </a>
-        <section class="search mobile-only">
-            <div class="search-field"><input name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl01$textsearchinputmobile" type="text" id="ctlPageContentPlaceHeader_ctl01_textsearchinputmobile" class="mobile-search-input" placeholder="Search" /></div>
-            <div class="search-btn"><input type="submit" name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl01$textsearchbtnmobile" value="s" id="ctlPageContentPlaceHeader_ctl01_textsearchbtnmobile" class="ficon mobile-search-btn" /></div>
-            
-        </section>
-        
-
-<ul class="nav-list">
+<div id="online_claims_chat_button" style="display:none;">
+    <a href="javascript://Chat" class="button-cta button-primary desktop" onclick="liveagent.startChat('573f3000000CbhY');return false;">
+        <i class="fa fa-comments"></i>
+        Chat Now
+    </a>
+    <a href="javascript://Chat" class="button-cta button-primary mobile" onclick="liveagent.startChat('573f3000000CbhY');return false;">
+        <i class="fa fa-comments"></i>
+        Chat Now
+    </a>
+</div>
 
 
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_0" class="item0">
-            
-            <a href='/about/' class='menu-title' target='_self'>
-                About
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/about/'>About&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/about/profile/' target='_self'>
-                                        Company Profile
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/about/teva_corporate_officers/' target='_self'>
-                                        Corporate Officers
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/about/corporate_governance/' target='_self'>
-                                        Corporate Governance
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/about/corporate_governance/board_of_directors/' target='_self'>
-                                        Board of Directors
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/about/history/' target='_self'>
-                                        Our History
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/integration/' target='_self'>
-                                        Actavis Integration
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{9153E675-86F7-42E2-A29F-7BEFED5265A8}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/files/about/Teva_Form20-F-2016.PDF">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/0111-IMG_4967_resize.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/0111-IMG_4967_resize.jpg" width="265" height="265" border="0" alt="2016 Annual Report on Form 20-F"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">2016 Annual Report on Form 20-F</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{76A6DBDD-3955-4F8E-9EFE-8051873CB6A7}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/about/profile/quality_assurance/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/about/lobby/Teva_About_Quality_Lobby_265x265.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/about/lobby/Teva_About_Quality_Lobby_265x265.jpg" width="265" height="265" border="0" alt="Quality"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Quality</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{7EF94189-ECB1-4921-A00D-46B1BBBE663D}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_blank' href="/files/about/lobby/proxyeng2017.pdf">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/about/lobby/tab_pic_1.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/about/lobby/tab_pic_1.jpg" width="265" height="227" border="0" alt="Notice of Annual Meeting of Shareholders 2017 – Proxy Statement"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Notice of Annual Meeting of Shareholders 2017 – Proxy Statement</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
-                    </div>
-                </div>
-            
-        </li>
+<div id="offline_claims_chat_button" style="display: none;" class="button-cta button-primary desktop">
+    <button href="" data-gtm="GTM_TAG" class="button-cta button-primary desktop" onclick="invokeClaimsChat();return false;">
+        <i class="fa fa-comments"></i>
+        CHAT NOW
+	</button>
+</div>
+
+<script type="text/javascript">
+	var hostname = window.location.hostname;
+    hostname = hostname.substring(0, 3);
+    if ( hostname == 'www' ) {
+		var validationID = '573f3000000CbhY';
+    } else {
+		var validationID = '57333000000PBEi';
+	}
+
+
+    if (!window._laq) { 
+        window._laq = []; 
+    }
+    window._laq.push(function(){
+        liveagent.showWhenOnline(validationID, document.getElementById('online_claims_chat_button'));
+    	liveagent.showWhenOffline(validationID, document.getElementById('offline_claims_chat_button'));
+    });
+</script>
+
+<style>
+.claimschatbutton .desktop button.button-cta {
+	cursor: default;
+    background: #dddddd;
+    height: 28px;
+}
+.claimschatbutton .desktop button.button-cta:hover {
+	cursor: default;
+    background: #dddddd;
+    height: 28px;
+}
+@media screen and (max-width: 992px) {
+    .claimschatbutton .desktop button.button-cta {
+        display: block;
+    }
+}
+</style></div>
+
     
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_1" class="item1">
-            
-            <a href='/our_products/' class='menu-title' target='_self'>
-                Products
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/our_products/'>Products&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/our_products/specialty_products/' target='_self'>
-                                        Specialty
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/our_products/generic_products/' target='_self'>
-                                        Generic Products
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/our_products/generic_qa/' target='_self'>
-                                        Generic FAQ
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/our_products/otc_pgt/' target='_self'>
-                                        Over the Counter (OTC)
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/our_products/active_pharmaceutical_ingredients/' target='_self'>
-                                        API
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/about/profile/quality_assurance/' target='_self'>
-                                        Quality
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{41940F1D-C613-43D0-B445-13271755E100}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/our_products/specialty_products/cns/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/products/lobby/Teva_Products_Central-Nervous-System_Lobby.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/products/lobby/Teva_Products_Central-Nervous-System_Lobby.jpg" width="183" height="118" border="0" alt="Central Nervous System (CNS)"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Central Nervous System (CNS)</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{1373B7A0-233E-47C1-954E-6C327694C6D6}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/our_products/specialty_products/respiratory/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/products/lobby/Teva_Products_Respiratory_Lobby_185x119.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/products/lobby/Teva_Products_Respiratory_Lobby_185x119.jpg" width="185" height="119" border="0" alt="Respiratory"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Respiratory</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
+</div></div>
                     </div>
-                </div>
-            
-        </li>
-    
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_2" class="item2 current">
-            
-            <a href='/research_development/' class='menu-title' target='_self'>
-                Research
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only current"><a href='/research_development/'>Research&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/research_development/rd_integrated/' target='_self'>
-                                        Integrated R&D
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/research_development/rd_focus/' target='_self'>
-                                        Our Focus
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/research_development/rd_partnerships/patient_safety/' target='_self'>
-                                        Patient Promise
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/research_development/rd_focus/pipeline/' target='_self'>
-                                        Pipeline
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/research_development/rd_partnerships/business_development/' target='_self'>
-                                        Business Development
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/research_development/biomed/' target='_self'>
-                                        Teva at IATI BIOMED 2015
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{117C7267-3D6D-4044-8C44-1EE838A95B2B}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_blank' href="/files/home_page/lobby/111115/PV0715-TEVA-Hayden-v2.pdf">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/home_page/lobby/111115/spotlight.png);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/home_page/lobby/111115/spotlight.png" width="200" height="120" border="0" alt="Leading the Fight for Cures"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Leading the Fight for Cures</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{76760A2B-FA99-4409-B61A-EFF2E7E78A40}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/research_development/rd_partnerships/nne/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/research/partnerShips/NNE/Teva_RD_398x377_397x376.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/research/partnerShips/NNE/Teva_RD_398x377_397x376.jpg" width="397" height="376" border="0" alt="National Network of Excellence"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">National Network of Excellence</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
-                    </div>
-                </div>
-            
-        </li>
-    
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_3" class="item3">
-            
-            <a href='/corporate_responsibility/' class='menu-title' target='_self'>
-                Responsibility
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/corporate_responsibility/'>Responsibility&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/corporate_responsibility/agents_improved_outcomes/' target='_self'>
-                                        Improving Outcomes
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/corporate_responsibility/exceeding_patient_needs/' target='_self'>
-                                        Meeting Needs
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/corporate_responsibility/joining_forces_researchers/' target='_self'>
-                                        Joining Forces
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/corporate_responsibility/going_beyond_prescription/' target='_self'>
-                                        Beyond Prescriptions
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/corporate_responsibility/safe_healthy_future/' target='_self'>
-                                        Healthy Futures
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/corporate_responsibility/deepening_roots_communities/' target='_self'>
-                                        Our Communities
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/files/Csr_2014/doc/Teva_CSR_highlights.pdf' target='_blank'>
-                                        Responsibility Highlights
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/files/responsibility/lobby/TEVA_2015_Communication_on_Progress.pdf' target='_blank'>
-                                        2015 CSR Communication on Progress
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/corporate_responsibility/previous_reports/' target='_self'>
-                                        Previous CSR Reports
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{E9F6F4CB-FD9E-4D38-8D84-AB28D8EBA03B}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/supplier_faqs/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/supplier.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/supplier.jpg" width="265" height="176" border="0" alt="Supplier Code of Conduct &amp; Information for Our Suppliers"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Supplier Code of Conduct & Information for Our Suppliers</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{A37DA3C7-44CA-4ECE-B210-5A017DFD0E84}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/corporate_responsibility/global_patient_advocacy_engagement/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/responsibility/lobby/responsibility.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/responsibility/lobby/responsibility.jpg" width="418" height="418" border="0" alt="Global Patient Organization and Advocacy Disclosure"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Global Patient Organization and Advocacy Disclosure</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
-                    </div>
-                </div>
-            
-        </li>
-    
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_4" class="item4">
-            
-            <a href='/news_media/' class='menu-title' target='_self'>
-                Media
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/news_media/'>Media&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/news/' target='_self'>
-                                        Latest News
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/featuredstories/' target='_self'>
-                                        Featured Stories
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/news_media/media_albums/' target='_self'>
-                                        Media Albums
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/files/Teva_Corporate_Fact_Sheet_Q42016.pdf' target='_blank'>
-                                        Teva Fact Sheet
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/files/media/doc/infographic_extrnal_print.pdf' target='_blank'>
-                                        Teva Overview
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{C01E6283-3955-418A-B658-5557380B6842}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/featuredstories/pliva_awarded_two_golden_keys.aspx">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/media/lobby/PLIVA_Awarded_Two_Golden_Keys_420x377_419x376.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/media/lobby/PLIVA_Awarded_Two_Golden_Keys_420x377_419x376.jpg" width="419" height="376" border="0" alt="PLIVA Awarded Two Golden Keys"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">PLIVA Awarded Two Golden Keys</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
-                    </div>
-                </div>
-            
-        </li>
-    
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_5" class="item5">
-            
-            <a href='/investor_relations/' class='menu-title' target='_self'>
-                Investors
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/investor_relations/'>Investors&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/?catid=%7B5644F6CA-C70F-43D0-9DF2-0F4E2E044123%7D' target='_self'>
-                                        News
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7B1C22C77D-41B3-4963-AA20-DC955443BB3A%7D' target='_self'>
-                                        Webcasts and Presentations
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7B4BEC9554-ACD1-492F-98A5-2213FAA9DBF2%7D' target='_self'>
-                                        Corporate Governance
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/?catid=%7BACB4607E-B266-4E46-8360-745DD4CAB0DA%7D' target='_self'>
-                                        Financial Information
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7B9E0A238D-DF7C-4E10-BF73-3ACF732366E6%7D' target='_self'>
-                                        Stock Information
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7BCA078113-4234-48BB-8C0B-8BA7C191E5B0%7D' target='_self'>
-                                        Shareholder Information
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/?catid=%7BB7598639-BF7A-4906-B843-B8ADE5D082CB%7D' target='_self'>
-                                        Teva In-Focus
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7B7E506DA4-B35C-456C-85E8-F43CCF9BD357%7D' target='_self'>
-                                        Analysts Coverage/Consensus
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/?catid=%7BC34C0249-4CEF-47B0-9C70-DEFBFD7BC4D8%7D' target='_self'>
-                                        Investor Kit
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/?catid=%7BF9CC51EC-31CE-46D0-B7FD-F095744D00B4%7D' target='_self'>
-                                        Contact Us
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        -->                        
-                    </div>
-                </div>
-            
-        </li>
-    
-
-
-        <li id="ctlPageContentPlaceHeader_ctl01_ctl00_ctl00_ctlLi_6" class="item6">
-            
-            <a href='/teva_careers/' class='menu-title' target='_self'>
-                Careers
-            </a>
-            
-                <div class="sub-menu">
-                    <div class="sub-menu-wrap">
-                        <ul>
-                            <li class="lobby-link mobile-only "><a href='/teva_careers/'>Careers&nbsp;Lobby</a></li>
-                            
-                                    
-                                    <li class=""><a href='/teva_careers/our_people/' target='_self'>
-                                        Our People
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/teva_careers/the_best/' target='_self'>
-                                        Grow with the Best
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    
-                                    <li class=""><a href='/teva_careers/career_value/' target='_self'>
-                                        Our Guiding Values
-                                    </a>
-                                    
-                                    </li>
-                                
-                                    </ul><ul>
-                                    <li class=""><a href='/teva_careers/leadership/' target='_self'>
-                                        Leadership Development
-                                    </a>
-                                    
-                                    </li>
-                                
-                        </ul><!--
-                        --><div id="{37DAD9AA-6727-4FE7-B8AB-D467EB05CE9A}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/teva_careers/our_people/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/careers/content/meet_our_people/_0001_Keren_Haruvi_content.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/careers/content/meet_our_people/_0001_Keren_Haruvi_content.jpg" width="300" height="377" border="0" alt="Our People"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Our People</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div><div id="{CFC55956-0259-468E-BE82-3132D4C16D45}" class="menu-text-box-wrap desk-only">
-                                 <a class="block-wrap-link" target='_self' href="/teva_careers/the_best/">                                       
-                                        <article class="menu-text-box box-bg-purple">
-                                            <figure class="menu-box-img" style="background-image:url(/files/careers/lobby/Grow_with_the_Best_347x420.jpg);">
-                                                <div class="gr-ie8fixer"></div>
-                                                <IMG src="/files/careers/lobby/Grow_with_the_Best_347x420.jpg" width="347" height="420" border="0" alt="Grow with the Best"  />
-                                            </figure>
-                                            <section class="menu-box-content">
-                                                <h4 class="menu-box-title">Grow with the Best</h4>
-                                            </section>
-                                        </article>
-                                    </a>
-                                </div>                        
-                    </div>
-                </div>
-            
-        </li>
-    </ul>
-
-
-
-         
-        <div class="desktop-only menu-bg-wrap"></div>
-        <ul class="fix-menu-item small-menu top-menu">
-            <li class="search"><a href="" class="search-toggle ficon"></a>
-                <div class="search-wrap">
-            
-                        <input name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl01$textsearchinput" type="text" id="ctlPageContentPlaceHeader_ctl01_textsearchinput" class="search-field" placeholder="Search" />
-                        <input type="submit" name="ctl00$ctl00$ctlPageContentPlaceHeader$ctl01$textsearchbtn" value="s" id="ctlPageContentPlaceHeader_ctl01_textsearchbtn" class="ficon search-btn" />
-            
-
-                    
-                </div>
-            </li>
-            <li class='social linked'><a href='https://www.linkedin.com/company/5239?trk=tyah&trkInfo=tarId%3A1421348704576%2Ctas%3Ateva%20pharmaceuticals%2Cidx%3A2-1-4' class='ficon'></a></li>
-            <li class='social google'><a href='https://plus.google.com/+tevapharm/about' class='ficon'></a></li>
-            <li class='social facebook'><a href='https://www.facebook.com/tevapharm' class='ficon'></a></li>
-        </ul>
-        <ul class="mobile-only top-menu-links">
-        
-        
-                
-                        <li class="text-link global">
-                            <a href='/teva_worldwide/americas/' target='_self'>Teva Worldwide</a>
-                            
-                        </li>
-                    
-                        <li class="text-link stock">
-                            <a href='/?catid=%7B4609A932-ACCB-41A0-8A24-26C7D73C74C8%7D' target='_self'>Stock</a>
-                            
-                        </li>
-                    
-                        <li class="text-link">
-                            <a href='/contact_us/' target='_self'>Contact Us</a>
-                            
-                        </li>
-                    
-                        <li class="text-link">
-                            <a href='http://www.teva.co.il/Pages/default.aspx' target='_blank'>Hebrew</a>
-                            
-                        </li>
-                    
-            
-        </ul>
-        <ul class="mobile-only follow-us">
-            <li class="follow-us-label">Follow Us:</li>
-            <li class='social linked'><a href='https://www.linkedin.com/company/5239?trk=tyah&trkInfo=tarId%3A1421348704576%2Ctas%3Ateva%20pharmaceuticals%2Cidx%3A2-1-4'  onclick="ga('send', 'event', 'linkedin', 'Mobile', 'lower header');" class='ficon'></a></li>
-            <li class='social google'><a href='https://plus.google.com/+tevapharm/about'  onclick="ga('send', 'event', 'Google+', 'Mobile', 'lower header');" class='ficon'></a></li>
-            <li class='social facebook'><a href='https://www.facebook.com/tevapharm'  onclick="ga('send', 'event', 'facebook', 'Mobile', 'lower header');" class='ficon'></a></li>
-        </ul>
-        
-        
-    </div>
-    <script>
-        $('.fix-menu-item .search-field').keydown(function (event) {
-            if (event.keyCode == 13) {
-                $('.fix-menu-item .search-btn').click();
-                return false;
-            }
-        });
-
-        $('.main-menu .mobile-search-input').keydown(function (event) {
-            if (event.keyCode == 13) {
-                //alert('hjhj');
-                $(this).closest('.search.mobile-only').find('.mobile-search-btn').click();
-                return false;
-            }
-        });
-    </script>
-</nav>
-
-    </section>
-    
-
-           	
-
-		    
-    <section>
-        
-        <section class="breadcrumbs">
-            <ul class="base-width">
-                <span id="ctlPageContentPlaceHolder_ctlNavigationPath" class="breadcrumbs-wrap"><span>
-                        
-                        
-                            <li class="crumb1"><a href='/'>Home page</a></li>
-                        
-                    </span><span></span><span>
-                        
-                        
-                    </span><span></span><span>
-                        
-                        
-                            <li class="crumb5"><a href='/research_development/'>Research</a></li>
-                        
-                    </span><span></span><span>
-                        
-                        
-                            <li class="crumb7"><a href='/research_development/rd_partnerships/'>Partnerships</a></li>
-                        
-                    </span><span></span><span>
-                        
-                        
-                            <li class="crumb9"><a href='/research_development/rd_partnerships/patient_safety/'>Patient Safety & Pharmacovigilance</a></li>
-                        
-                    </span></span>
-            </ul>
-
-
-            <div class="base-width page-title-wrap  no-zone4">
-                <h2 class="page-title">Partnerships</h2>
-                    <a class="go2parent" href="/research_development/rd_partnerships/">Go to Parent</a>
-
-
-                
-            </div>
-        </section>
-
-
-        
-    </section>
-
-    <div class="main-content">
-        <div class="base-width">
-            
-            <aside id="ctlPageContentPlaceHolder_idSecondZone" class="side-area">
-                <h1 id="ctlPageContentPlaceHolder_lblTitlePageAside" class="side-menu-toggle mobile-only"></h1>
                 
             
-                    <nav class="side-menu">
-						<ul>
-                
-                    </ul>
-					</nav>
-                                                                      
-                
-		<article id="{7C13B0A3-40F9-4821-B17D-57484A55BFC1}" class="side-content-box  box-bg-purple">
-			<a name="{7C13B0A3-40F9-4821-B17D-57484A55BFC1}"></a>
-            <a href="/research_development/rd_partnerships/nne/" id="ctlPageContentPlaceHolder_SVSrvPrezZoneHolder1_ctl00_ctlItems_ctlClickableBanner_0" class="block-wrap-link" target="_self">
-                <figure style="background-image:url(/files/research/partnerShips/NNE/Teva_RD_National-Network-of-Excellence_Content.jpg);" class="side-content-img">
-                    
-                </figure><section class="side-content-box-desc">
-                    <h3 class="sub-title">Most Read</h3>
-			        <h2 class="side-content-box-title">National Network of Excellence</h4>
-                </section>
-            </a>
-		</article>
-        
-	
-        <script>
-            $(function () {
-            $('.side-content-box-title').ellipsis({
-                row: 3,
-                onlyFullWords: true
-            });
-            });
-        </script>
-    
-
-            </aside><!--
-		--><section class="page-main-content">
-                
-        <article id="{B45CAC6D-6961-40C9-90D6-0245D3F65007}" class="content-itm">
-            
-            <a class="anchor" name="{B45CAC6D-6961-40C9-90D6-0245D3F65007}"></a>
-
-            <h1 class="content-itm-title">Patient Safety is Our Focus</h1>
-            <section class="content-itm-short-desc"><DIV dir=ltr>Patient safety is at the heart of all we do and one of our core principles. All of our medicines undergo thorough safety monitoring and evaluation processes at every stage of a medicine's lifecycle. </DIV></section>
-            <section class="share-zone">
-                <article class="share-networks cf">
-                    
-                    <a onclick="ga('send', 'event', 'Facebook - Share', 'Click', 'General');" class="share-btn facebook ficon" href='http://www.facebook.com/sharer.php?u=http://www.tevapharm.com//research_development/rd_partnerships/patient_safety/' target="_blank"><span>Share on Facebook</span></a><!--
-				    --><a onclick="ga('send', 'event', 'LinkedIn - Share', 'Click', 'General');" class="share-btn linked ficon" href='http://www.linkedin.com/shareArticle?mini=true&url=http://www.tevapharm.com//research_development/rd_partnerships/patient_safety/' target="_blank"><span>Share on LinkedIn</span></a><!--
-				    --><a onclick="ga('send', 'event', 'Google+ - Share', 'Click', 'General');" class="share-btn google ficon" href='https://plus.google.com/share?url=http://www.tevapharm.com//research_development/rd_partnerships/patient_safety/' target="_blank">&nbsp;</a>
-                </article>
-                <article class="share-adthis cf">
-                    <div class="addthis_sharing_toolbox desk-only"></div>
-                    <article class="mobile-only btn-container">
-                        <ul>
-                            <li class="email-btn mo">
-                                <a href="mailto:?subject=Patient Safety is Our Focus&body=http://www.tevapharm.com//research_development/rd_partnerships/patient_safety/">&#x2709;</a>
-                            </li>
-                        </ul>
-                    </article>
-                    <script type="text/javascript">
-                        var addthis_config = {
-                            data_ga_property: 'UA-16851568-1'
-                        };
-                    </script>
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53f499c76ea6c175"></script>
-
-                </article>
-            </section>
-              
-            
-            
-            
-            
-
-            
-            <article class="itm-main-content"><H3>Uncompromising Commitment</H3>
-<P>We are committed to absolute transparency in exposing the benefits and risks of our medicines, and work in complete accordance with health authorities around the world.<BR><BR>While we take all measures to maintain the safety of our products,<STRONG> any medicine, no matter how safe and effective, can sometimes cause unforeseen side effects (negative or positive),</STRONG> and it is important for physicians and patients to stay well informed and alert. The benefits of a medicine must be weighed against its possible risks, and the decision of prescribing a medicine should be based on patients’ health needs and preferences.<BR></P>
-<H3>Our Safety Professionals</H3>Our Pharmacovigilance unit safety professionals are<STRONG> responsible for monitoring, identifying, analyzing and reporting potential safety risks associated with the use of a Teva medicinal product or device.<BR><BR></STRONG>Our pharmacovigilance team: 
-<UL>
-<LI>Takes an active part in the studies during the investigational stage, monitoring the safety of medicines in clinical use by collecting adverse events</LI>
-<LI>Maintains an advanced database of all reported side effects that is used for effective collection, assessment and prevention of adverse events</LI>
-<LI>Actively reviews and reports to regulatory authorities side effects reported by patients, their caregivers or healthcare professionals</LI>
-<LI>Uses sophisticated techniques, data analytics and clinical judgment to determine the possibility of a new risk once a drug is marketed</LI>
-<LI>Is continuously monitored by regulatory authorities</LI>
-<LI>Engages external advisory panels to ensure patient safety</LI>
-<LI>Involved in monitoring safety in studies conducted with marketed Teva products</LI></UL>
-<H3>How We Collect Safety Data</H3>Once a medicine has been released on the market, physicians, patients, healthcare teams and other caregivers can report side effects and safety concerns. These can either be reported to us directly or to the local authorities. All of our employees participate in pharmacovigilance training, to ensure effective collection of safety data within our organization.<BR><BR>Additionally, <STRONG>we take active measures to analyze all collected safety data:</STRONG> 
-<UL>
-<LI><STRONG>Signal Detection</STRONG> - A periodic review, whereby the safety profile of each product is analyzed and evaluated to identify any possible new safety issues</LI>
-<LI><STRONG>Periodic Safety Update Report</STRONG> - A comprehensive report submitted to the authorities that includes safety data and analysis of risk-benefit profile</LI>
-<LI><STRONG>Risk Management Plan</STRONG> - Based on a specific product’s safety profile, Teva suggests additional activities to monitor, minimize or prevent identified and potential risks and adverse events</LI></UL>
-<P>We encourage patients and caregivers to fill out the following form: </P>
-
-<appian-related-action recordTypeUrlStub="NkXalA" recordIdentifier="10" processModelUuid="0002dea0-bef3-8000-f92f-7f0000014e7a"></appian-related-action>
-
-<H3>Medicine Safety and You</H3>Medicines can help you get well, avoid illness or reduce symptoms associated with a disease. By learning more about the appropriate and safe use of a medicine, its benefits, and potential side effects, you become an active participant in discussions held with your healthcare team.<BR><BR>There are many ways to become a well-informed patient: 
-<UL>
-<LI><STRONG>Ask your physician what to expect from your medicine:</STRONG> what side effects may occur, whether any follow-up testing or monitoring will be needed and when to expect an improvement</LI>
-<LI><STRONG>Read the label and follow instructions</STRONG>. Pay attention to warnings about serious and minor side effects. Notice instructions concerning mixing medicines and avoiding certain activities while using them. Keep in mind that side effects may bring about various states of inconvenience or discomfort</LI>
-<LI><STRONG>Know your medicine</STRONG> - Know the names and dosages of all the medicines you take and the conditions they treat</LI>
-<LI><STRONG>Remember your healthcare history</STRONG> - Inform your physician of prior allergies, sensitivities or side effects experienced</LI>
-<LI><STRONG>Follow the timing and dosage instructions on your prescription</STRONG> - Consult with your physician if you have doubts or concerns</LI>
-<LI><STRONG>Keep track of a medicine’s effects on your body and mind.</STRONG> Write down any changes and consult your physician</LI></UL></article>
-            
-
-
-
-            
-            <script>
-                $(function () {
-                    $('.itm-main-img').each(function (index, element) {
-                        var curImg = $(element).find('img');
-                        if ($(curImg).width() < 100 && $(curImg).height() < 100) {
-                            $(element).addClass('hidden-img');
-                        }
-                    });
-                });
-            </script>
-        </article>
-    
-
-
-        <section class="cont-up6inline related">
-        <h2 class="cont-up6inline-title">You May Also Like...</h2>
-			<ul>
-    <li><a href="/research_development/rd_partnerships/nocri/" id="ctlPageContentPlaceHolder_SVSrvPrezZoneHolder0_ctl01_ctlItems_ctlClickableBanner_0" class="block-wrap-link">
-            <article class="itm-up6inline-wrap box-bg-cyan">
-                <figure class="itm-up6inline-img" style="background-image:url(/files/global/content-pic_d.jpg);"></figure><!--
-                --><section class="itm-up6inline-cont" >
-                    
-                        
-                        <span class="related-itm-label">Related Reading</span>
-                    
-                    <h3 class="itm-up6inline-title">National Health Service (NHS) UK</h3>
-                    
-                    
-                    
-                </section> 
-            </article>
-        </a></li><li class="separator"></li><li><a href="/research_development/rd_focus/neurodegenerative_disease/" id="ctlPageContentPlaceHolder_SVSrvPrezZoneHolder0_ctl01_ctlItems_ctlClickableBanner_1" class="block-wrap-link">
-            <article class="itm-up6inline-wrap box-bg-cyan">
-                <figure class="itm-up6inline-img" style="background-image:url(/files/global/content-pic_d.jpg);"></figure><!--
-                --><section class="itm-up6inline-cont" >
-                    
-                        
-                        <span class="related-itm-label">Related Reading</span>
-                    
-                    <h3 class="itm-up6inline-title">Sparking Inspiration in Neurodegenerative Disease</h3>
-                    
-                    
-                    
-                </section> 
-            </article>
-        </a></li><li class="separator"></li><li><a href="/research_development/rd_focus/respiratory/" id="ctlPageContentPlaceHolder_SVSrvPrezZoneHolder0_ctl01_ctlItems_ctlClickableBanner_2" class="block-wrap-link">
-            <article class="itm-up6inline-wrap box-bg-cyan">
-                <figure class="itm-up6inline-img" style="background-image:url(/files/research/our_focus/TevaRDRespiratoryContent.jpg);"></figure><!--
-                --><section class="itm-up6inline-cont" >
-                    
-                        
-                        <span class="related-itm-label">Related Reading</span>
-                    
-                    <h3 class="itm-up6inline-title">A Fresh Approach to Respiratory Care</h3>
-                    
-                    
-                    
-                </section> 
-            </article>
-        </a></li><li class="separator"></li><li><a href="/featuredstories/chinese_deputy_minister_visits_teva.aspx" id="ctlPageContentPlaceHolder_SVSrvPrezZoneHolder0_ctl01_ctlItems_ctlClickableBanner_3" class="block-wrap-link">
-            <article class="itm-up6inline-wrap box-bg-cyan">
-                <figure class="itm-up6inline-img" style="background-image:url(/files/featured_stories/Chinese_Deputy_Minister_Visits_Kfar_Saba/Chinese_Deputy_Minister_Visits_Teva_at_Kfar_Saba_Israel.jpg);"></figure><!--
-                --><section class="itm-up6inline-cont" >
-                    
-                        
-                        <span class="related-itm-label">Related Reading</span>
-                    
-                    <h3 class="itm-up6inline-title">Chinese Deputy Minister Visits Teva at Kfar Saba, Israel</h3>
-                    
-                    
-                    
-                </section> 
-            </article>
-        </a></li>
-            </ul>
-        </section>
-    
- 
-                <div class="side-zone-content-copy"></div>
-                
-            </section>
         </div>
     </div>
+</div>
 
-
-
-
-
-
-
-			
-		    
-			    
-
-<footer class="footer">
     
-        <section class="footer-content">
-            <div class="base-width">
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
 
-                
-            
-                <nav class="bottom-menu">
+    
+
+<div class="rich-text article-list-header">
+    <h2>Other ways to report a claim</h2>
+
+</div> 
+
+</div>
+<div class="ruled-list aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+    <div style="margin-bottom:0px;">
+    	<div class="container">
+			<div class="rule-box">
+				
+					<h4>By text</h4>
+				
+				<div class="row no-gutters">
+					<div class="col-2">
+						<div class="imageBox"><img alt="By text" src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-phone.svg"/></div>
+					</div>
+					<div class="col-10">
+						<div class="contetntBoxPadding text-left-padding">
+							<p>Text the words REPORTCLAIM to 29141, and you'll receive a link to begin the claims process. </p>
+<p><i>Messaging and data rates may apply.</i></p>
+
+						</div>
+                    </div>
+				</div>
+			</div>
+			<hr>
+		</div>
+    </div>
+</div>
+<div class="ruled-list aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+    <div style="margin-bottom:0px;">
+    	<div class="container">
+			<div class="rule-box">
+				
+					<h4>The Farmers Mobile app</h4>
+				
+				<div class="row no-gutters">
+					<div class="col-2">
+						<div class="imageBox"><img alt="The Farmers Mobile app" src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-phone.svg"/></div>
+					</div>
+					<div class="col-10">
+						<div class="contetntBoxPadding text-left-padding">
+							<p>Download the app to report claims, easily view your ID cards, pay bills, and more. <br />
+</p>
+<p><a href="https://csstp.farmers.com/mobile/">Learn more about the Farmers Mobile app</a></p>
+
+						</div>
+                    </div>
+				</div>
+			</div>
+			<hr>
+		</div>
+    </div>
+</div>
+<div class="ruled-list aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+    <div style="margin-bottom:0px;">
+    	<div class="container">
+			<div class="rule-box">
+				
+					<h4>Call the Claim Contact Center</h4>
+				
+				<div class="row no-gutters">
+					<div class="col-2">
+						<div class="imageBox"><img alt="Call the Claim Contact Center" src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-claims-rep.png"/></div>
+					</div>
+					<div class="col-10">
+						<div class="contetntBoxPadding text-left-padding">
+							<p>To speak directly with a representative, give us a call anytime at:</p>
+<h5>1-800-435-7764</h5>
+<p>1-877-732-5266 (en Espanol)<br />
+1-888-891-1660 TTY (for the hearing impaired)</p>
+
+						</div>
+                    </div>
+				</div>
+			</div>
+			<hr>
+		</div>
+    </div>
+</div>
+<div class="threefeatures parbase aem-GridColumn aem-GridColumn--default--12"><div class="three-features" style="background-color:;margin-bottom:px;">
+    <div class="container">
+	<h2></h2>
+	<p></p>
+	<div class="row no-gutters">
+	   	<div class="col col-md-4">
+			<div>
+<div class="cell expFragment mouse-pointer cell-hover">
+    
+		<a href="https://www.farmers.com/learn/plan-and-prep/how-to-handle-a-roadside-emergency/" data-gtm="Farmers_Claims_Article1_Body">
+	
+    
+    
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/farmers/marketing/digital/aem/images/claims/roadside-emergency.jpg" alt="Road Side Emergency" title="Road Side Emergency"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>Roadside Emergency Tips from a Highway Patrol Commander Who Has Seen it All…at 70 MPH</h3>
+<p>If you've got a flat tire, dead battery, an empty gas tank or you're stranded on the side of the road, these tips may help when responding to these common roadside breakdowns.</p>
+
+</div> 
+
+</div>
+
+    
+</div>
+	
+		</a>
+	
+</div>
+</div>
+		</div>
+	<div class="w-100 d-none d-sm-block"></div>
+   		<div class="col col-md-4">
+		    <div>
+<div class="cell expFragment mouse-pointer cell-hover">
+    
+		<a href="/claims/auto-claims/car-accident-checklist" data-gtm="Farmers_Claims_Article2_Body">
+	
+    
+    
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/farmers/marketing/digital/aem/images/claims/car-accident-claims.jpg" alt="Car Accident Claims" title="Car Accident Claims"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>Car Accident Checklist</h3>
+<p>What information do you need to file a claim after an auto accident? This handy checklist can help you prepare ahead of time.</p>
+
+</div> 
+
+</div>
+
+    
+</div>
+	
+		</a>
+	
+</div>
+</div>
+		</div>
+	<div class="w-100 d-none d-sm-block"></div>
+		<div class="col col-md-4">
+			<div>
+<div class="cell expFragment mouse-pointer cell-hover">
+    
+		<a href="https://farmers.truecar.com/main.html?referrer_id=ZFAR000022705" data-gtm="Farmers_Claims_Article3_Body">
+	
+    
+    
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+    <img src="/content/dam/farmers/marketing/digital/aem/images/claims/true-car-claims.jpg" alt="True Car Claims" title="True Car Claims"></img>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3>Shop for a New Car and Save</h3>
+<p>The Farmers Car Shopping Service, offered by TRUECar™, can help you simplify the process of researching and buying a new or used car. You could save some money on the purchase of your next car.</p>
+
+</div> 
+
+</div>
+
+    
+</div>
+	
+		</a>
+	
+</div>
+</div>
+		</div>    
+	</div>
+	</div>
+</div>
+
+</div>
+
+    
+</div></div></div>
+
+    
+</div></div>
+<div class="fatfooter aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+    
+
+
+
+
+    <footer class="footer">
+        <div class="container footer-content d-block d-sm-none">
+            <div class="row">
+                <section class="list-section">
+                     <h3>
+						
+						
+							About
+						
+               		 </h3>
                     
-                            <ul>
                         
-                            <li class="bottom-menu-item"><a href='/about/' class='title'  target='_self'>
-                                About
-                            </a>
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/about/profile/' target='_self'>
-                                            Company Profile
-                                        </a></li>
-                                     
-                                        <li><a href='/about/teva_corporate_officers/' target='_self'>
-                                            Corporate Officers
-                                        </a></li>
-                                     
-                                        <li><a href='/about/corporate_governance/' target='_self'>
-                                            Corporate Governance
-                                        </a></li>
-                                     
-                                        <li><a href='/about/corporate_governance/board_of_directors/' target='_self'>
-                                            Board of Directors
-                                        </a></li>
-                                     
-                                        <li><a href='/about/history/' target='_self'>
-                                            Our History
-                                        </a></li>
-                                     
-                                        <li><a href='/integration/' target='_self'>
-                                            Actavis Integration
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/our_products/' class='title'  target='_self'>
-                                Products
-                            </a>
+                                    <ul class="list-one-column ">
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/our_products/specialty_products/' target='_self'>
-                                            Specialty
-                                        </a></li>
-                                     
-                                        <li><a href='/our_products/generic_products/' target='_self'>
-                                            Generic Products
-                                        </a></li>
-                                     
-                                        <li><a href='/our_products/generic_qa/' target='_self'>
-                                            Generic FAQ
-                                        </a></li>
-                                     
-                                        <li><a href='/our_products/otc_pgt/' target='_self'>
-                                            Over the Counter (OTC)
-                                        </a></li>
-                                     
-                                        <li><a href='/our_products/active_pharmaceutical_ingredients/' target='_self'>
-                                            API
-                                        </a></li>
-                                     
-                                        <li><a href='/about/profile/quality_assurance/' target='_self'>
-                                            Quality
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/research_development/' class='title'  target='_self'>
-                                Research
-                            </a>
+                                <li>
+                                    <a href="/about-us/" data-gtm="Farmers_HP_Footer_About">About us</a>
+                                </li>
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/research_development/rd_integrated/' target='_self'>
-                                            Integrated R&D
-                                        </a></li>
-                                     
-                                        <li><a href='/research_development/rd_focus/' target='_self'>
-                                            Our Focus
-                                        </a></li>
-                                     
-                                        <li><a href='/research_development/rd_partnerships/patient_safety/' target='_self'>
-                                            Patient Promise
-                                        </a></li>
-                                     
-                                        <li><a href='/research_development/rd_focus/pipeline/' target='_self'>
-                                            Pipeline
-                                        </a></li>
-                                     
-                                        <li><a href='/research_development/rd_partnerships/business_development/' target='_self'>
-                                            Business Development
-                                        </a></li>
-                                     
-                                        <li><a href='/research_development/biomed/' target='_self'>
-                                            Teva at IATI BIOMED 2015
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/corporate_responsibility/' class='title'  target='_self'>
-                                Responsibility
-                            </a>
+                            
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/corporate_responsibility/agents_improved_outcomes/' target='_self'>
-                                            Improving Outcomes
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/exceeding_patient_needs/' target='_self'>
-                                            Meeting Needs
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/joining_forces_researchers/' target='_self'>
-                                            Joining Forces
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/going_beyond_prescription/' target='_self'>
-                                            Beyond Prescriptions
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/safe_healthy_future/' target='_self'>
-                                            Healthy Futures
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/deepening_roots_communities/' target='_self'>
-                                            Our Communities
-                                        </a></li>
-                                     
-                                        <li><a href='/files/Csr_2014/doc/Teva_CSR_highlights.pdf' target='_blank'>
-                                            Responsibility Highlights
-                                        </a></li>
-                                     
-                                        <li><a href='/files/responsibility/lobby/TEVA_2015_Communication_on_Progress.pdf' target='_blank'>
-                                            2015 CSR Communication on Progress
-                                        </a></li>
-                                     
-                                        <li><a href='/corporate_responsibility/previous_reports/' target='_self'>
-                                            Previous CSR Reports
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/news_media/' class='title'  target='_self'>
-                                Media
-                            </a>
+                                <li>
+                                    <a href="/corporate-giving/" data-gtm="Farmers_HP_Footer_CorporateGiving">Corporate giving</a>
+                                </li>
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/news/' target='_self'>
-                                            Latest News
-                                        </a></li>
-                                     
-                                        <li><a href='/featuredstories/' target='_self'>
-                                            Featured Stories
-                                        </a></li>
-                                     
-                                        <li><a href='/news_media/media_albums/' target='_self'>
-                                            Media Albums
-                                        </a></li>
-                                     
-                                        <li><a href='/files/Teva_Corporate_Fact_Sheet_Q42016.pdf' target='_blank'>
-                                            Teva Fact Sheet
-                                        </a></li>
-                                     
-                                        <li><a href='/files/media/doc/infographic_extrnal_print.pdf' target='_blank'>
-                                            Teva Overview
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/investor_relations/' class='title'  target='_self'>
-                                Investors
-                            </a>
+                            
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/?catid=%7B5644F6CA-C70F-43D0-9DF2-0F4E2E044123%7D' target='_self'>
-                                            News
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7B1C22C77D-41B3-4963-AA20-DC955443BB3A%7D' target='_self'>
-                                            Webcasts and Presentations
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7B4BEC9554-ACD1-492F-98A5-2213FAA9DBF2%7D' target='_self'>
-                                            Corporate Governance
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7BACB4607E-B266-4E46-8360-745DD4CAB0DA%7D' target='_self'>
-                                            Financial Information
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7B9E0A238D-DF7C-4E10-BF73-3ACF732366E6%7D' target='_self'>
-                                            Stock Information
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7BCA078113-4234-48BB-8C0B-8BA7C191E5B0%7D' target='_self'>
-                                            Shareholder Information
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7BB7598639-BF7A-4906-B843-B8ADE5D082CB%7D' target='_self'>
-                                            Teva In-Focus
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7B7E506DA4-B35C-456C-85E8-F43CCF9BD357%7D' target='_self'>
-                                            Analysts Coverage/Consensus
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7BC34C0249-4CEF-47B0-9C70-DEFBFD7BC4D8%7D' target='_self'>
-                                            Investor Kit
-                                        </a></li>
-                                     
-                                        <li><a href='/?catid=%7BF9CC51EC-31CE-46D0-B7FD-F095744D00B4%7D' target='_self'>
-                                            Contact Us
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            <li class="bottom-menu-item"><a href='/teva_careers/' class='title'  target='_self'>
-                                Careers
-                            </a>
+                                <li>
+                                    <a href="/news/" data-gtm="Farmers_HP_Footer_Newsroom">Newsroom</a>
+                                </li>
                                 
-                                        <ul>
-                                    
-                                        <li><a href='/teva_careers/our_people/' target='_self'>
-                                            Our People
-                                        </a></li>
-                                     
-                                        <li><a href='/teva_careers/the_best/' target='_self'>
-                                            Grow with the Best
-                                        </a></li>
-                                     
-                                        <li><a href='/teva_careers/career_value/' target='_self'>
-                                            Our Guiding Values
-                                        </a></li>
-                                     
-                                        <li><a href='/teva_careers/leadership/' target='_self'>
-                                            Leadership Development
-                                        </a></li>
-                                     
-                                        </ul>
-                                    
-
-                            </li>
-                        
-                            </ul>
-                        
-                </nav>
+                            
+                    
+                </section>
             
-            <div class="left-footer-unit">
-                <a class="logo" href="">
-                    <img src='files/images/logo.png' alt='Teva Pharmaceutical Industries Ltd' />
-                </a><ul class="media-icons">
-                    <li class="social-title">Follow Teva:</li>
-                    <li id="ctlFooterPlaceHolder_ctlFooter_facebook" class="social facebook">
-                        <a onclick="ga('send', 'event', 'Facebook', 'Click', 'Footer');" href="https://www.facebook.com/tevapharm" target="_blank" class="ficon"></a>
-                    </li>
-                    <li id="ctlFooterPlaceHolder_ctlFooter_linkedin" class="social linked">
-                        <a onclick="ga('send', 'event', 'LinkedIn', 'Click', 'Footer');" href="https://www.linkedin.com/company/5239?trk=tyah&trkInfo=tarId%3A1421348704576%2Ctas%3Ateva%20pharmaceuticals%2Cidx%3A2-1-4" target="_blank" class="ficon"></a>
-                    </li>
-                    <li id="ctlFooterPlaceHolder_ctlFooter_google" class="social google">
-                        <a onclick="ga('send', 'event', 'Google+', 'Click', 'Footer');" href="https://plus.google.com/+tevapharm/about" target="_blank" class="ficon"></a>
-                    </li>
-                </ul>
+                <section class="list-section">
+                     <h3>
+						
+						
+							Resources
+						
+               		 </h3>
+                    
+                        
+                                
+                                    <ul class="list-two-column ">
+                                
+                                <li>
+                                    <a href="https://recruitment.farmers.com/" data-gtm="Farmers_HP_Footer_AgentCareers">Be a Farmers agent</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/discounts/" data-gtm="Farmers_HP_Footer_Discounts">Discounts</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/mobile/" data-gtm="Farmers_HP_Footer_MobileApp">Farmers Mobile App</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/accessibility/" data-gtm="Farmers_HP_Footer_Accessibility">Digital Accessibility</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/farmers-friendly-review/" data-gtm="Farmers_HP_Footer_FFR">Farmers Friendly Review®</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/rewardsvisa/" data-gtm="Farmers_HP_Footer_Visa">Farmers® Rewards Visa® Card</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/faq/" data-gtm="Farmers_HP_Footer_FAQ">FAQ</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/learn/" data-gtm="Farmers_HP_Footer_LFE">Learn From Experience</a>
+                                </li>
+                                
+                            
+                    
+                </section>
+            
+                <section class="list-section">
+                     <h3>
+						
+						
+							Quick Service Links
+						
+               		 </h3>
+                    
+                        
+                                
+                                    <ul class="list-two-column ">
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_Footer_QS_Contact">Report a claim</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/customerselfservice/CSSU#/forgotuserpassword" data-gtm="Farmers_HP_Footer_QS_Forgot">Forgot username/password</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/payments/" data-gtm="Farmers_HP_Footer_QS_Payments">Make a payment</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Footer_QS_Register">Register for an account</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_Footer_QS_Roadside">Roadside assistance</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/login/?%23/idcards" data-gtm="Farmers_HP_Footer_QS_IDCard">View Auto ID card</a>
+                                </li>
+                                
+                            
+                    
+                </section>
             </div>
-                
-                </div>
-        </section><!--
-    --><nav class="footer-bottom-line">
-		<ul class="base-width cf">
+        </div>
+    </footer>
+</div>
+<div class="bluefooter aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+<div class="global_footer_new">
+   <div id="global-footer">
+      <section class="global_footer">
+         <div class="social-web-links">
+            <div class="container social-web-links-list">
+               
+                  <ul>
+                     <li><a href="/site-map/" data-gtm="Farmers_HP_Footer_Sitemap">Sitemap</a></li>
+                  
+                     <li><a href="/careers/" data-gtm="Farmers_HP_Footer_Careers">Careers</a></li>
+                  
+                     <li><a href="/contact-us/" data-gtm="Farmers_HP_Footer_Contact">Contact Us</a></li>
+                  
+                     <li><a href="/disclaimer/terms-of-use/" data-gtm="Farmers_HP_Footer_TermsofUse">Terms of Use</a></li>
+                  
+                     <li><a href="/disclaimer/privacy-policy/" data-gtm="Farmers_HP_Footer_Privacy">Privacy Policy</a></li>
+                  
+                     <li><a href="/companies/" data-gtm="Farmers_HP_Footer_Companies">Our Companies</a></li>
+                  </ul>
+               
+            </div>
+         </div>
+         <div class="social-links">
             
-                
-                        <li ><a href='/?catid=%7BA52A7855-1010-4350-8CC5-D2AEDC774EA6%7D' target='_self'>
-                            Legal Notes
-                        </a></li>
-                    
-                        <li ><a href='/?catid=%7BA1ED3EB7-FC9A-4FFD-9EC4-31DA80A55F7F%7D' target='_self'>
-                            Data Privacy
-                        </a></li>
-                    
-                        <li ><a href='https://www.tapi.com/?utm_source=TevaPharm%20HP&utm_medium=Tevapharm%20banner&utm_campaign=new%20website%20launch' target='_blank'>
-                            TAPI
-                        </a></li>
-                    
-                        <li ><a href='/?catid=%7B36820B79-29B0-44AD-900C-5B9DF73E6AEC%7D' target='_self'>
-                            Supplier FAQs
-                        </a></li>
-                    
-                        <li ><a href='/?catid=%7B127DB210-27D1-4659-B20A-E6CAE2590910%7D' target='_self'>
-                            Sitemap
-                        </a></li>
-                    
-			
-			<li class="copyright last"><a href="#">© 2015 Teva Pharmaceutical Industries Ltd.</a></li>
-		</ul>
-	</nav>
-</footer>
-
-		    
-	    </section>
-    </form>
-	<script type="text/javascript" language="javascript">
-        $(function () {
-	        var __anchorItem = null;
-	        if (location.hash.substr(1) != "")
-	        {
-		        __anchorItem = document.getElementById(location.hash.substr(1));
-	        }
-	        if (__anchorItem!=null)
-	        {
-		        __anchorItem.style.border = "1px dashed #0081D7";
-                $('html,body').animate({ scrollTop: $(__anchorItem).offset().top - 100 }, 'slow', function(){
-                    var fixMenu = $(".main-menu.fixed").height() + 20;
-                    $('html,body').animate({ scrollTop: $(__anchorItem).offset().top - fixMenu }, 'slow');
-                });
-	        }
-        });
-	</script>
-    
 
 
-
-    <script type="text/javascript" src="SVTemplate/js/general.min.js"></script>
-    
-    
-    
-
-
-
-    <!-- Testing by LiranT&AlexeyK 18-08-2015 -->
-
-    <div id='_webengage_script_tag'></div>
-    <script type="text/javascript">
-  var _weq = _weq || {};
-  _weq['webengage.licenseCode'] = '11b564056';
-  _weq['webengage.widgetVersion'] = "4.0";
   
-  (function(d){
-    var _we = d.createElement('script');
-    _we.type = 'text/javascript';
-    _we.async = true;
-    _we.src = (d.location.protocol == 'https:' ? "https://ssl.widgets.webengage.com" : "http://cdn.widgets.webengage.com") + "/js/widget/webengage-min-v-4.0.js";
-    var _sNode = d.getElementById('_webengage_script_tag');
-    _sNode.parentNode.insertBefore(_we, _sNode);
-  })(document);
-    </script>
+    
+    
+  
+    <div class="social-web-links-icons">  
+           <ul aria-label="Social Media" role="navigation">
+             <li>
+                <a class="btn" href="https://www.facebook.com/FarmersInsurance" title="Facebook" role="button" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="https://twitter.com/wearefarmers" title="Twitter" role="button" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="http://instagram.com/wearefarmers/" title="Instagram" role="button" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="https://www.linkedin.com/company/farmers-insurance" title="Linkedin" role="button" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+             </li>
+           </ul>     
+     </div>
+
+         </div>
+         <div class="farmers-footer-logo">
+            <a href="https://www.farmers.com" target="_self">
+            <img src="/content/dam/farmers/marketing/digital/aem/images/misc/Logo_Footer.png" alt="Farmers Logo">
+            </a>
+         </div>
+         <p>© 2018 Farmers</p>
+      </section>
+   </div>
+   <section id="fat-footer_2" class="fat_footer">
+     <div class="container">  
+      <div class="col-sm-11 foot-note">
+         <p><p><sup id="1"><span class="sr-only">return link</span>1</sup> Life insurance issued by Farmers New World Life Insurance Company, 3003 77th Ave SE, Mercer Island, WA 98040.<br />
+Products &amp; features may not be available in all states &amp; may vary by state. Restrictions, exclusions, limits, and conditions apply.<br />
+<br />
+<span id="2"><span class="sr-only">return link</span>*</span> Securities offered through Farmers Financial Solutions, LLC, (In NY: Farmers Financial Solutions and Insurance Agency), 30801 Agoura Rd. Bldg. 1 Agoura Hills, CA 91301. Member <a href="https://www.finra.org/" target="_blank" class="no_outline">FINRA <img src="/content/dam/ada/new_window_blue.svg" alt="opens in new window" height="12" width="12"/></a> &amp; <a href="https://www.sipc.org/" target="_blank" class="no_outline">SIPC <img src="/content/dam/ada/new_window_blue.svg" alt="opens in new window" height="12" width="12"/></a>.<br />
+<br />
+* <a href="https://www.farmers.com/faq" class="no_outline">Products and Services/Auto or Home/Questions you may have about Risk Assessment Indicators</a><br />
+<br />
+**Between 7/1/15 and 9/30/15, the average estimated savings off MSRP presented by TrueCar Certified Dealers to users of TrueCar powered websites, based on users who configured virtual vehicles and who TrueCar identified as purchasing a new vehicle of the same make and model listed on the certificate from a Certified Dealer as of 10/31/2015, was $3,279. Your actual savings may vary based on multiple factors including the vehicle you select, region, dealer, and applicable vehicle specific manufacturer incentives which are subject to change.  The Farmers Car Shopping Service website is owned and operated by TrueCar, which is not affiliated with any of the companies comprising the Farmers Insurance Group of Companies.<br />
+<br />
+</p>
+</p>
+      </div>
+     </div> 
+   </section>
+</div></div>
+
+    
+</div></div>
+
+    
+</div></div>
+
+</div>
+
+        
+    
+    
+
+    
+    
+<script type="text/javascript" src="/etc.clientlibs/farmers/clientlibs/clientlib-libraries.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/farmers/clientlibs/clientlib-base.js"></script>
 
 
-</body>
+
+
+
+    
+
+
+        
+
+    <script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]);</script><script type="text/javascript" src="/_bm/abd-1-30"></script></body>
 </html>
+

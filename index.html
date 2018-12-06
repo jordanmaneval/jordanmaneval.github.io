@@ -1,120 +1,1805 @@
 
 
+
 <!DOCTYPE HTML>
-<head><script src="/eFNOL/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/eFNOL/jslibrary/1539646802000/sfdc/VFRemote.js" type="text/javascript"></script><script src="/eFNOL/jslibrary/1539646802000/sfdc/NetworkTracking.js" type="text/javascript"></script><script>try{ NetworkTracking.init('/eFNOL/_ui/networks/tracking/NetworkTrackingServlet', 'network', '06633000000I3wA'); }catch(x){}try{ NetworkTracking.logPageView();}catch(x){}</script><script>(function(UITheme) {
-    UITheme.getUITheme = function() { 
-        return UserContext.uiTheme;
-    };
-}(window.UITheme = window.UITheme || {}));</script><script type="text/javascript">
-Visualforce.remoting.Manager.add(new $VFRM.RemotingProviderImpl({"vf":{"vid":"06633000000I3wA","xhr":false,"dev":false,"tst":false,"dbg":false,"tm":1544057115028,"ovrprm":false},"actions":{"CSP_LoginController":{"ms":[{"name":"changeCSPCustomerPassword","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpoYSxjLVlMa2JWaWpNTzVnLU9QUjhVVGtOLFpXWmlZbUky"},{"name":"forgotPasswordFlow","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpoYSxrNGFYcU5teXJvSUNZUXY4LS1DQ3M4LE5tUTRObU0y"},{"name":"forgotUsernameFlow","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxRbk4wYUtkb2NVRk1ZZmNxeVE4cjRzLE1EbGpNakEw"},{"name":"getCompanyPhoneNumber","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxwMFJDalJHSHliUWk1b2lqOTI2UktXLE5HRTNabUU1"},{"name":"getMaintenence","len":0,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxRci1DaC1NSWtEUXlfWjB0SXBmTEYxLFltWmxPR1pt"},{"name":"medicalProviderLink","len":0,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSx0MkkxRzFIeXAza050emlzN2Z3RndiLE5EaG1aRFl5"},{"name":"resetPasswordFlow","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxTcHF1QjFnNThpNnhjUkVnR2tiZ1h0LE16SmtZMkk0"},{"name":"soRelatedInfo","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxRTDA2ekJiMTZQaWplUkpMRkFvVEI3LE5URXpZekEx"},{"name":"validateCSPLogin","len":1,"ns":"","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHdPVlF3TURvME5Ub3hOUzR3TWpsYSxXTDB1ZURQZVRySnhPTkU3cFJFdzJPLFpEazRNV1Zp"}],"prm":1}},"service":"eFNOL/apexremote"}));
-</script></head><body>
-   <html ng-app="StatusPath">
-      <head>
-<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
-<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Insurance Quotes for Home, Auto, &amp; Life : Farmers Insurance</title>
+    
+    
+    <meta name="template" content="farmers-home-page-template"/>
+    
 
-         <title>Status Path</title>
-         <link href="/eFNOL/resource/1541815845000/statuspath_style/css/farmers-style.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/css/csphyd.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/css/dropzone_custom.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1541815845000/statuspath_style/css/slick.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1541815845000/statuspath_style/css/slick-theme.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1541815845000/statuspath_style/css/stacktable.css" rel="stylesheet" />
-         <link href="/eFNOL/resource/1541815845000/statuspath_style/css/jquery-ui.css" rel="stylesheet" />
-         <meta content="width=device-width, initial-scale=1" name="viewport" />
-         <script>
-            var sitePrefix = "/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/", sessionID ="NULL_SESSION_ID", domainName = "https://www.farmers.com/eFNOL",
-            customerBtnID = "57333000000TNxo", agentBtnID = "57333000000TNxl", bwCustomerBtnID = "57333000000TNxn",
-            bwAgentBtnID = "57333000000TNxm", chatinitCode = "https://d.la1-c1-iad.salesforceliveagent.com/chat", deploymentID = "57233000000TNwO",
-            orgID = "00DE0000000f0YX", firstName = "eFNOL", lastName = "Site Guest User", email = "jessica.grady@21st.com",
-            passRulesMessage = "Your password must be at least 8 characters in length and must contain at least one uppercase, one lower case, one number, and one special character.",RedCrossUrl = "http://www.redcross.org/", FemaUrl = "https://www.fema.gov/", CatastropheUrl = "https://www.farmers.com/catastrophe/" ,
-            FBUrl = "https://www.facebook.com/AARPMotorcycle.MobileHomeInsurance" ,TwitterUrl = "https://twitter.com/@FarmersResponse";
-         </script>
-         
-         <script src="/soap/ajax/14.0/connection.js"></script>
-         
-         <script src="https://c.la1-c1-iad.salesforceliveagent.com/content/g/js/39.0/deployment.js" type="text/javascript"></script>
-      </head>
-      <body>
-         <ui-view></ui-view>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/jquery.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/jquery-ui.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/modernizr.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/not_supported.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/jquery.nanoscroller.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/slick.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/exportexcelfilesaver.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/libs/bootstrap/js/bootstrap.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/libs/angular.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/libs/angular-ui-router.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/libs/angular-cookies/angular-cookies.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/libs/mask.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/stacktable.min.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/header.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/jcode.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-input-masks/2.5.0/angular-input-masks-standalone.min.js"></script>
-         
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/app.js"></script>
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/common/filters/filters.js"></script>
-         
-         
-        
-        
-          
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/login/login.module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/login/login.controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/login/login.service.js"></script>
-         
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/resetpassword/resetpassword--module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/resetpassword/resetpassword--controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/resetpassword/resetpassword--service.js"></script>
-         
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotemail/forgotemail--module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotemail/forgotemail--controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotemail/forgotemail--service.js"></script>
-         
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotpassword/forgotpassword--module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotpassword/forgotpassword--controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/forgotpassword/forgotpassword--service.js"></script>
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pageBeforePrelogin/pageBeforePrelogin.module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pageBeforePrelogin/pageBeforePrelogin.controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pageBeforePrelogin/pageBeforePrelogin.service.js"></script>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
      
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pre_login/preLogin.module.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pre_login/preLogin.controller.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/views/pre_login/preLogin.service.js"></script>
+    
+   	<meta name="robots" content="nofollow, noindex"/>
+	
+    <meta property="og:title" content="Insurance Quotes for Home, Auto, &amp; Life : Farmers Insurance"/>
+    <meta property="og:description"/>
+    <meta property="og:url" content="https://www.farmers.com/content/falcon/en/index/multiline-insurance.html"/>
+	    
 
-         
-         
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/js/app-directives.js"></script>
-         <script src="/eFNOL/resource/1542175311000/ClaimStatusLogin_Main/common/onlinechat-component/onlinechat--directive.js"></script>
-         
-          <script>
-          //script to capture the value from the constructor CSP_LoginController
-          var isCSPUnderMaintenace= false;
-          var maintenanceMessage = 'System is currently in maintenance, please try again later';
-         </script>   
-         
-         <script>
-          var mainsiteUrl = function() {
-                var siteFullPath = location.href;
-                if(siteFullPath) {
-                var siteUrlPath = siteFullPath.split('claimsstatusportal_login');
-                    if(siteUrlPath.length > 0){
-                        return siteUrlPath[0];
-                    }
+
+    <meta name="twitter:title" content="Insurance Quotes for Home, Auto, &amp; Life : Farmers Insurance"/>
+    <meta name="twitter:description"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@WeAreFarmers"/>
+    <meta name="twitter:site" content="www.farmers.com"/>
+  	
+	
+    <link rel="canonical" href="https://www.farmers.com/content/falcon/en/index/multiline-insurance.html"/>
+	
+	
+    
+    	
+    
+<link rel="stylesheet" href="/etc.clientlibs/farmers/clientlibs/clientlib-libraries.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/farmers/clientlibs/clientlib-base.css" type="text/css">
+
+
+
+     
+	
+	   
+	
+    
+<script type="text/javascript" src="/etc.clientlibs/clientlibs/granite/jquery.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/clientlibs/granite/utils.js"></script>
+
+
+
+	<script type="text/javascript">
+            (function() {
+                window.ContextHub = window.ContextHub || {};
+
+                /* setting paths */
+                ContextHub.Paths = ContextHub.Paths || {};
+                ContextHub.Paths.CONTEXTHUB_PATH = "/etc/cloudsettings/default/contexthub";
+                ContextHub.Paths.RESOURCE_PATH = "\/content\/falcon\/en\/index\/multiline\u002Dinsurance\/_jcr_content\/contexthub";
+                ContextHub.Paths.SEGMENTATION_PATH = "\/etc\/segmentation\/contexthub";
+                ContextHub.Paths.CQ_CONTEXT_PATH = "";
+
+                /* setting initial constants */
+                ContextHub.Constants = ContextHub.Constants || {};
+                ContextHub.Constants.ANONYMOUS_HOME = "/home/users/M/MNTfsmiT5ZBJG6mV3F4p";
+                ContextHub.Constants.MODE = "no-ui";
+            }());
+        </script><script src="/etc/cloudsettings/default/contexthub.kernel.js" type="text/javascript"></script>
+
+
+	<!-- Krux Integration -->
+    <script type="text/javascript">
+        try {
+          var segmentProvider = {
+            name: 'kruxSegments',
+            version: '1.0.0',
+            timeout: 2000,
+            provider: function(callback) {
+              (function pollForKUID(){
+                try {
+                  if (localStorage.getItem('kxfarmers_kuid') !== null) {
+                    var kuid = localStorage.getItem('kxfarmers_kuid');
+                    var url = 'https://cdn.krxd.net/userdata/v2/segments/f02be25b-ed05-4972-a144-57653f813683/user/'+kuid;
+        
+                    $.ajax({
+                      type: "GET",
+                      url: url,
+                      dataType: "json",
+                      success: function(data) {
+                        var segmentsArray = JSON.parse(data).body.segments;
+                        callback(null, {
+                          kruxSegments: segmentsArray.join(' ');
+                        });
+                      },
+                      error: function(err){
+                        console.log("Error", err);
+                        callback(err);
+                      }
+                    });
+                  } else if (document.readyState !== 'complete'){
+                    return setTimeout(pollForKUID, 50);
+                  }
+                } catch (e) {
+                  console.warn('Krux Mbox Integration Polling Error', e);
                 }
-                return "https://statusdev1-farmers.cs24.force.com/eFNOL/";
-            };
-          </script> 
-        <script src="/eFNOL/resource/1543270913000/googleCspTagMgr"></script> 
-      <script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]);</script><script type="text/javascript" src="/_bm/abd-1-30"></script></body>
-      
-   </html></body>
+              })();
+            }
+          }
+        
+          window.targetGlobalSettings = {
+            dataProviders: [
+              segmentProvider
+            ]
+          }
+        } catch(e) {
+          console.error('Krux Mbox Integration Error', e);
+        }
+    </script>
+    <script language="javascript1.2" src="/etc/designs/falcon/rwd/clientlibs_base/js/mbox.js"></script>
+
+    
+    
+    
+
+    
+    
+
+    
+    
+        <!--[if IE]><link rel="shortcut icon" href="/etc/designs/falcon/favicon.ico"/><![endif]-->
+    
+    
+    
+
+    <link rel="icon" href="/etc/designs/falcon/favicon.ico"/>
+
+    
+
+    
+
+    
+
+    
+
+</head>
+    <body>
+        
+
+
+
+        
+<div class="container" id="farmers-home-page-template">
+    <div class="root responsivegrid full-width">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="primaryNavigation aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<header class="nav-primary-wrapper" role="banner">
+	<div class="skip-to-content hidden-xs hidden-sm">
+        <nav class="container" role="presentation">
+            <a href="#main-content">Skip to main content</a>
+        </nav>
+    </div>
+    <nav class="nav-primary" role="navigation" aria-label="primary" style="opacity:0;">
+        <div class="container top-nav-container">
+            <ul class="nav justify-content-center top-nav">  
+
+				<div class="left-menu-mobile initial-state">
+					<div class="toggle-button-wrapper hidden-md">
+						<button type="button" aria-label="Toggle Button" class="navbar-toggle" id="mobile-menu-toggle-button" tabindex="0">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<i class="fa fa-times close-icon"></i>
+						</button>
+						<div class="clearfix"></div>
+					</div>
+					<div class="mobile-menu hidden-md">
+						<div class="shadow-mask"></div>
+						<ul class="mobile-nav">
+							<li class="mobile-menu-label">Menu</li>
+							
+													
+									
+										<li class="nav-item mobile-menu-item main-nav-item" role="menu">
+											<a href="javascript:void(0);">
+												Insurance
+											</a>
+											<button type="button" class="open-sub-menu ">
+												<i class="fa fa-angle-right" aria-hidden="true"></i>
+												<span class="sr-only">Opens submenu</span>
+											</button>
+											<div class="mobile-menu mobile-sub-menu  hidden-md initial-state">
+												<ul class="mobile-nav mobile-sub-nav">
+													<li class="mobile-menu-label mobile-sub-menu-label">
+														<span class="triangle back-arrow" aria-hidden="true"></span>
+														<button type="button">Back</button>
+													</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/auto/" data-gtm="Farmers_HP_MainNav_AutoIcon">Auto</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/home/" data-gtm="Farmers_HP_MainNav_HomeIcon">Home</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/life/" data-gtm="Farmers_HP_MainNav_LifeIcon">Life</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/business/" data-gtm="Farmers_HP_MainNav_BusinessIcon">Business</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/recreational/" data-gtm="Farmers_HP_MainNav_RecreationalIcon">Recreational</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/motorcycle/" data-gtm="Farmers_HP_MainNav_MotorcycleIcon">Motorcycle</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/umbrella/" data-gtm="Farmers_HP_MainNav_UmbrellaIcon">Umbrella</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/financial/" data-gtm="Farmers_HP_MainNav_Financial">Financial Products</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/pet-insurance/" data-gtm="Farmers_HP_MainNav_PetInsurance">Pet Insurance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/renters/" data-gtm="Farmers_HP_MainNav_Renters">Renters Insurance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/insurance/" data-gtm="Farmers_HP_MainNav_BrowseProducts">Browse all products</a>
+														</li>
+													
+												</ul>
+											</div>
+										</li>
+									
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://www.farmers.com/quote/ffq/landingpage.jsf" data-gtm="Farmers_HP_Quote_MainNav">Get a quote</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://agents.farmers.com/search.html" data-gtm="Farmers_HP_Agents_MainNav">Find an agent</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+													
+									
+										<li class="nav-item mobile-menu-item main-nav-item" role="menu">
+											<a href="javascript:void(0);">
+												Claims
+											</a>
+											<button type="button" class="open-sub-menu ">
+												<i class="fa fa-angle-right" aria-hidden="true"></i>
+												<span class="sr-only">Opens submenu</span>
+											</button>
+											<div class="mobile-menu mobile-sub-menu  hidden-md initial-state">
+												<ul class="mobile-nav mobile-sub-nav">
+													<li class="mobile-menu-label mobile-sub-menu-label">
+														<span class="triangle back-arrow" aria-hidden="true"></span>
+														<button type="button">Back</button>
+													</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_MainNav_ReportClaimIcon">Report a Claim</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="https://pet1-farmers.cs40.force.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_HP_MainNav_ViewClaimIcon">View Claim Status</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_MainNav_RoadsideAssistanceClaimIcon">Roadside Assistance</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/catastrophe/" data-gtm="Farmers_HP_MainNav_CatastropheCenterIconClaimIcon">Catastrophe Centre</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/" data-gtm="Farmers_HP_MainNav_ViewClaimLink">View Claim Overview</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/auto-claims/" data-gtm="Farmers_HP_MainNav_AutoClaimIcon">Auto Claims</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/property-claims/" data-gtm="Farmers_HP_MainNav_PropertyClaimIcon">Property Claims</a>
+														</li>
+													
+														<li class="nav-item sub-nav-item">
+															<a href="/claims/business-claims/" data-gtm="Farmers_HP_MainNav_BusinessClaimsClaimLink">Business Claims</a>
+														</li>
+													
+												</ul>
+											</div>
+										</li>
+									
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="/payments/" data-gtm="Farmers_HP_PayBill_MainNav">Pay bill</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									<li class="nav-item mobile-menu-item main-nav-item">
+										<a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Register_MainNav">Register</a>
+									</li>  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+													
+									
+									
+									  
+									
+								
+							
+						</ul>
+					</div>
+				</div>
+                    
+				
+					
+						
+							<li class="nav-item main-nav-item desktop-menu-item hidden-xs hidden-sm" role="menu">
+								<a href="javascript:void(0);" data-gtm="Farmers_HP_Insurance_MainNav">
+									Insurance
+									<span class="sr-only">Opens submenu</span>
+								</a>
+								<div class="sub-menu insurance-nav initial-state" aria-hidden="true">
+									<div class="shadow-mask"></div>
+									<div class="container">
+										<div class="row">
+											<div class="sub-menu-left">
+												<ul>
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/auto/" data-gtm="Farmers_HP_MainNav_AutoIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/auto.svg" class="img-responsive" alt="Car icon"/>
+															Auto
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/home/" data-gtm="Farmers_HP_MainNav_HomeIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/home.svg" class="img-responsive" alt="Car icon"/>
+															Home
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/life/" data-gtm="Farmers_HP_MainNav_LifeIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/life.svg" class="img-responsive" alt="Car icon"/>
+															Life
+														</a>
+														<a href="#fat-footer_2" class="footnote-life">
+															<span class="sr-only">footnote</span>&#185;
+														</a>
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/business/" data-gtm="Farmers_HP_MainNav_BusinessIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/business-property.svg" class="img-responsive" alt="Car icon"/>
+															Business
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/recreational/" data-gtm="Farmers_HP_MainNav_RecreationalIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/recreational-boat.svg" class="img-responsive" alt="Car icon"/>
+															Recreational
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/motorcycle/" data-gtm="Farmers_HP_MainNav_MotorcycleIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/motorcycle.svg" class="img-responsive" alt="Car icon"/>
+															Motorcycle
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/umbrella/" data-gtm="Farmers_HP_MainNav_UmbrellaIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/umbrella.svg" class="img-responsive" alt="Car icon"/>
+															Umbrella
+														</a>
+														
+													</li>
+												
+													
+												
+													
+												
+													
+												
+													
+												</ul>
+											</div>
+											<div class="sub-menu-right">
+											 <div class="left-submenu-border">
+												<ul>
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													<li class="sub-menu-item">
+														<a href="/financial/" data-gtm="Farmers_HP_MainNav_Financial">Financial Products</a>									
+														<a href="#fat-footer_2" class="footnote">
+															<span class="sr-only">footnote</span>*
+														</a>
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/pet-insurance/" data-gtm="Farmers_HP_MainNav_PetInsurance">Pet Insurance</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/renters/" data-gtm="Farmers_HP_MainNav_Renters">Renters Insurance</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/insurance/" data-gtm="Farmers_HP_MainNav_BrowseProducts">Browse all products</a>									
+														
+													</li>
+												</ul>
+											 </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://www.farmers.com/quote/ffq/landingpage.jsf" data-gtm="Farmers_HP_Quote_MainNav">Get a quote</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://agents.farmers.com/search.html" data-gtm="Farmers_HP_Agents_MainNav">Find an agent</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+								<li class="nav-item main-nav-item logo-item hidden-xs hidden-sm">
+									<a href="/" class="no-underline" target="_self">
+                                        <img data-imageurl="/content/dam/farmers/marketing/digital/aem/images/misc/farmers-ins-logo.svg" alt="Farmers Insurance Home Page" class="logo-nav desktop-logo" title="Farmers Insurance Home Page"/>
+									</a>
+								</li>
+								<li class="nav-item main-nav-item logo-item hidden-md">
+									<a href="/" class="no-underline" target="_self">
+                                        <img data-imageurl="/content/dam/farmers/marketing/digital/aem/images/misc/farmers-mobile-logo.svg" alt="Farmers Insurance Mobile Home Page" class="logo-nav mobile" title="Farmers Insurance Mobile Home Page"/>
+									</a>
+								</li>
+							
+							
+						
+					
+				
+					
+						
+							<li class="nav-item main-nav-item desktop-menu-item hidden-xs hidden-sm" role="menu">
+								<a href="javascript:void(0);" data-gtm="Farmers_HP_Claims_MainNav">
+									Claims
+									<span class="sr-only">Opens submenu</span>
+								</a>
+								<div class="sub-menu insurance-nav initial-state" aria-hidden="true">
+									<div class="shadow-mask"></div>
+									<div class="container">
+										<div class="row">
+											<div class="sub-menu-left">
+												<ul>
+													<li role="menuitem" class="sub-menu-item">
+														<a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_MainNav_ReportClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/report-claim.svg" class="img-responsive" alt="Car icon"/>
+															Report a Claim
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="https://pet1-farmers.cs40.force.com/eFNOL/claimsstatusportal_login#/prelogin?SO=01" data-gtm="Farmers_HP_MainNav_ViewClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/view-claim-status.svg" class="img-responsive" alt="Car icon"/>
+															View Claim Status
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_MainNav_RoadsideAssistanceClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/towing-1.svg" class="img-responsive" alt="Car icon"/>
+															Roadside Assistance
+														</a>
+														
+													</li>
+												
+													<li role="menuitem" class="sub-menu-item">
+														<a href="/catastrophe/" data-gtm="Farmers_HP_MainNav_CatastropheCenterIconClaimIcon">
+															<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/catastrophe-center.svg" class="img-responsive" alt="Car icon"/>
+															Catastrophe Centre
+														</a>
+														
+													</li>
+												
+													
+												
+													
+												
+													
+												
+													
+												</ul>
+											</div>
+											<div class="sub-menu-right">
+											 <div class="left-submenu-border">
+												<ul>
+													
+												
+													
+												
+													
+												
+													
+												
+													<li class="sub-menu-item">
+														<a href="/claims/" data-gtm="Farmers_HP_MainNav_ViewClaimLink">View Claim Overview</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/auto-claims/" data-gtm="Farmers_HP_MainNav_AutoClaimIcon">Auto Claims</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/property-claims/" data-gtm="Farmers_HP_MainNav_PropertyClaimIcon">Property Claims</a>									
+														
+													</li>
+												
+													<li class="sub-menu-item">
+														<a href="/claims/business-claims/" data-gtm="Farmers_HP_MainNav_BusinessClaimsClaimLink">Business Claims</a>									
+														
+													</li>
+												</ul>
+											 </div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="/payments/" data-gtm="Farmers_HP_PayBill_MainNav">Pay bill</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+							
+							
+							
+								<li class="nav-item main-nav-item hidden-xs hidden-sm desktop-menu-item">
+									<a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Register_MainNav">Register</a>
+								</li>
+							
+						
+					
+				
+					
+						
+						
+							
+								<li class="nav-item main-nav-item desktop-menu-item">
+									<a href="/search/" aria-label="Search" data-gtm="Farmers_HP_Search_MainNav">
+										<i class="fa fa-search no-margin"></i>
+									</a>
+								</li>
+							
+							
+							
+							
+						
+					
+				
+					
+						
+						
+							
+							
+								<li class="nav-item main-nav-item desktop-menu-item	">
+									<a href="/login/" aria-label="Log In" data-gtm="Farmers_HP_Login_MainNav">
+										<i class="fa fa-user no-margin"></i>&nbsp;&nbsp;
+										Log in
+									</a>
+								</li>
+							
+							
+							
+						
+					
+				
+            </ul>
+		</div>
+    </nav>
+</header>
+
+<section class="container main-content-demo initial-state" id="main-content"> 
+</section>
+</div>
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid full-width aem-GridColumn aem-GridColumn--default--12">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="homepagebannersection parbase aem-GridColumn aem-GridColumn--default--12"><div class="hp-container" style="background-color:;margin-bottom:0px;">
+	<div class="image-container" style="display:; position:;">
+		<!-- /*
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/ -->
+
+    
+    
+<link rel="stylesheet" href="/libs/dam/components/scene7/dynamicmedia/clientlibs/dynamicmedia.css" type="text/css">
+<script type="text/javascript" src="/libs/dam/components/scene7/common/clientlibs/viewer.js"></script>
+<script type="text/javascript" src="/libs/dam/components/scene7/dynamicmedia/clientlibs/dynamicmedia.js"></script>
+<script type="text/javascript" src="/libs/dam/components/scene7/common/clientlibs/i18n.js"></script>
+
+
+
+    <!-- /* Viewer container when there is an asset */ -->
+	<div class="cq-dd-image ">
+        <div id="dynamicmedia_hpbannersection" data-current-page="/content/falcon/en/index/multiline-insurance" data-page-locale="en" data-asset-path="farmers/hero-homepage-multiline-burke-1500" data-asset-type="image" data-viewer-path="/etc/dam/viewers/s7viewers/" data-imageserver="https://s7d2.scene7.com/is/image/" data-videoserver="https://s7d2.scene7.com/is/content/" data-contenturl="/" data-wcmdisabled data-breakpoints="2000, 1500, 768" data-linktarget="_self" class="s7dm-dynamic-media">
+        </div>
+    </div>
+    <!-- /* Placeholder when there is no content */ -->
+	
+
+
+
+
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="left-section ">
+				<div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div></div>
+			</div>
+			<div class="right-section">
+				<div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="productgrid aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<div class="product-grid-flip" style="margin-bottom:30px;">
+<div class="shadow-wrapper product-grid">
+    <section class="home-getaquote">
+    	<h1 style="font-size: 48.0px;">We are Farmers<sup>®</sup></h1>
+<p> Select a product to browse or get a quote.  </p>
+
+        <div class="grid-section">
+			
+				
+					<a href="javascript:void(0);" class="count_grid_1">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/auto.svg" alt="Auto">
+                        <span>Auto</span>
+                    </a>
+
+				
+					<a href="javascript:void(0);" class="count_grid_2">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/home.svg" alt="Home">
+                        <span>Home</span>
+                    </a>
+
+				
+					<a href="javascript:void(0);" class="count_grid_3">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/life.svg" alt="Life">
+                        <span>Life</span>
+                    </a>
+
+				
+					<a href="javascript:void(0);" class="count_grid_4">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/navigation/business-property.svg" alt="Business">
+                        <span>Business</span>
+                    </a>
+
+				
+					<a href="javascript:void(0);" class="count_grid_5">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-renters.svg" alt="Renters">
+                        <span>Renters</span>
+                    </a>
+
+				
+					<a href="javascript:void(0);" class="count_grid_6">
+						<img src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-condo.svg" alt="Condo">
+                        <span>Condo</span>
+                    </a>
+
+				
+                
+                        <div id="count_grid_1" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Auto Insurance</h3>
+<ul style="list-style-position: inside;">
+<li>A range of coverage options </li>
+<li>Optional towing and roadside assistance coverage</li>
+<li>Available discounts</li>
+</ul>
+<p> </p>
+<p> </p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get an auto insurance quote</p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="auto"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_AutoQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_AutoLink_Top" href="/auto/">Or learn more about auto insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+                        <div id="count_grid_2" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Home Insurance</h3>
+<ul style="list-style-position: inside;">
+<li>Wide range of coverage options</li>
+<li>Knowledgeable agents</li>
+<li>Available discounts</li>
+</ul>
+<p> </p>
+<p> </p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get a home insurance quote</p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="home"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_HomeQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_HomeLink_Top" href="/home/">Or learn more about home insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+                        <div id="count_grid_3" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Life Insurance</h3>
+<h3> </h3>
+<h3> </h3>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p> </p>
+<p>
+</p>
+<ul style="list-style-position: inside;">
+
+
+</ul>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p> </p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get a life insurance quote </p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="lifec"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_LifeQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_LifeLink_Top" href="/life-insurance/">Or learn more about life insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+                        <div id="count_grid_4" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Business Insurance</h3>
+<ul style="list-style-position: inside;">
+<li>Wide variety of coverage types</li>
+<li>Industry-specific knowledge</li>
+<li>Optional loss control services</li>
+</ul>
+<p> </p>
+<p> </p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get a business insurance quote </p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="business"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_BusinessQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_BusinessLink_Top" href="/business/">Or learn more about business insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+                        <div id="count_grid_5" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Renters Insurance</h3>
+<ul style="list-style-position: inside;">
+<li>Customizable coverage options</li>
+<li>Contents replacement cost coverage</li>
+<li>Optional identity theft fraud expense coverage</li>
+</ul>
+<p> </p>
+<p> </p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get a renters insurance quote</p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="Renter"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_RentersQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_RentersLink_Top" href="/renters/">Or learn more about renters insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+                        <div id="count_grid_6" class="flip_content" style="visibility:hidden; width:0px; height:0px;overflow:hidden;">
+                            <a href="javascript:void(0);" class="close"></a>
+                            <h3>Condo Insurance</h3>
+<ul style="list-style-position: inside;">
+<li>Customizable coverage options</li>
+<li>Knowledgeable agents</li>
+<li>Available discounts </li>
+</ul>
+<p> </p>
+<p> </p>
+
+
+                            <section class="home-getaquote">
+                                <p class="insurance-quote">Get a condo insurance quote</p>
+                                <form action="https://www.farmers.com/quote/ffq/directlandingpage.jsf" method="POST" name="form_name" class="formhome_getquote">
+                                    <div class="input-wrapper">
+										<input aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="Zip_Code" maxlength="5" title="Enter your zip code" placeholder="Enter zip" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText" oninput="this.value=this.value.slice(0,this.maxLength)" step="1">
+                                            <span class="error-message">Please enter a 5 digit zip code.</span>
+                                    </div>
+                                    <input type="hidden" id="lob" name="Lob" value="condo"/>
+                                    <button type="button" data-gtm="Farmers_MultilineHP1_CondoQuote_Button" class="button-cta button-cross-sell home-startquote">Get a quote</button>
+                                </form>
+                            </section>
+                            <div class="link">
+                                <p><a data-gtm="Farmers_Multiline1HP1_CondoLink_Top" href="/home/condo/">Or learn more about condo insurance options</a></p>
+
+                                </div>	
+                        </div>
+				
+			
+        </div>
+    </section>
+    <!-- Promotion Section Overlay -->
+    <div class="overlay">
+       
+    </div>
+</div>
+</div>
+
+</div>
+<div class="promobanner aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<!-- Promotion Section -->
+
+
+<!-- another variant -->
+<div class="variation2 shadow-wrapper promotion-section">
+<div class="content-wrapper ">
+		<p><br />
+Our experienced agents can help you explore coverage so you can protect what matters most.<br />
+</p>
+
+    </div>
+    <div class="image-wrapper">
+    	<a href="https://agents.farmers.com/search.html" data-gtm="Farmers_MultilineHP1_FindAnAgentLink_Top">
+        	<img src="/content/dam/farmers/marketing/digital/aem/icons/misc/icon-consultant.svg" alt="promoicon">
+        </a>
+        </div>
+</div></div>
+
+    
+</div></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="farmerscontainer aem-GridColumn aem-GridColumn--default--12"><div class="container">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div></div></div>
+<div class="farmerscontainer aem-GridColumn aem-GridColumn--default--12"><div class="container">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h2 style="font-size: 2.1875em;color: rgb(0,48,135);text-align: center;">See the complete picture with Farmers</h2>
+<p style="text-align: center;">Auto, home and more – get the coverage you want from us.  We've seen a thing or two. </p>
+
+</div> 
+
+</div>
+<div class="columncontrol aem-GridColumn aem-GridColumn--default--12">
+<div class="column-control" style="margin-bottom:0px;">
+	<div class="container">
+    	<div class="row">
+             
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-3 col-6 center" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+	<a href="https://agents.farmers.com/search.html" target="_self">
+
+    <img src="/content/dam/farmers/marketing/digital/aem/images/homepage/icons/icon-agent-hp.png" alt="One experienced agent" title="One experienced agent"></img>
+
+	</a>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3 style="padding-top: 10.0px;"><br />
+One experienced agent</h3>
+<p>ready to help with answers to your questions and ongoing support. </p>
+
+</div> 
+
+</div>
+
+    
+</div></div>
+                    </div>
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-3 col-6 center" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+	<a href="/insurance" target="_self">
+
+    <img src="/content/dam/farmers/marketing/digital/aem/images/homepage/icons/icon-umbrella-hp.png" alt="Multiple policy options" title="Multiple policy options"></img>
+
+	</a>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3><br />
+Multiple policy options </h3>
+<p>coverage you can customize to suit various parts of your life.</p>
+
+</div> 
+
+</div>
+
+    
+</div></div>
+                    </div>
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-3 col-6 center" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+	<a href="/claims" target="_self">
+
+    <img src="/content/dam/farmers/marketing/digital/aem/images/homepage/icons/icon-claims-hp.png" alt="Claim Services" title="Claim Services"></img>
+
+	</a>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3 style="padding-top: 10.0px;"><br />
+Quick and easy claims</h3>
+<p>handled with care by our knowledgeable claims representatives.</p>
+
+</div> 
+
+</div>
+
+    
+</div></div>
+                    </div>
+                
+
+					
+                    
+                    
+                    
+
+                    <div class="col col-md-3 col-6 center" style="padding-top:px;padding-right:px;padding-bottom:px;padding-left:px;">
+                        <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersimage aem-GridColumn aem-GridColumn--default--12">
+	<a href="/discounts" target="_self">
+
+    <img src="/content/dam/farmers/marketing/digital/aem/images/homepage/icons/icon-discounts-hp.png" alt="Discounts" title="Discounts"></img>
+
+	</a>
+
+
+
+    
+</div>
+<div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <h3 style="padding-top: 18.0px;"><br />
+Discounts</h3>
+<p>to maximize savings while getting the coverage you want. </p>
+
+</div> 
+
+</div>
+
+    
+</div></div>
+                    </div>
+                
+            
+        </div>
+    </div>
+</div>
+
+    
+</div>
+
+    
+</div></div></div>
+<div class="acquisitionbanner parbase aem-GridColumn aem-GridColumn--default--12"><div class="acquisition-banner " style="max-height:451px;">
+     <!-- /*
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/ -->
+
+    
+    
+
+
+
+    <!-- /* Viewer container when there is an asset */ -->
+	<div class="cq-dd-image ">
+        <div id="dynamicmedia_acquisitionbanner" data-current-page="/content/falcon/en/index/multiline-insurance" data-page-locale="en" data-asset-path="farmers/agent-hp-banner" data-asset-type="image" data-viewer-path="/etc/dam/viewers/s7viewers/" data-imageserver="https://s7d2.scene7.com/is/image/" data-videoserver="https://s7d2.scene7.com/is/content/" data-contenturl="/" data-wcmdisabled data-breakpoints="2000, 768, 480" data-linktarget="_self" class="s7dm-dynamic-media">
+        </div>
+    </div>
+    <!-- /* Placeholder when there is no content */ -->
+	
+
+
+
+
+     <div class="container">
+     		
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="getaquote aem-GridColumn aem-GridColumn--default--12"><div class="shadow-wrapper findanagent" style="background-color:#fff;margin-bottom:0px;">
+	<section class="home-getaquote">
+		<h1 style="color:#003087;">Find a Farmers Agent</h1>
+		<p>For coverage and personalized service, find an experienced Farmers agent in your area.</p>
+
+		<form action="https://agents.farmers.com/search.html" method="GET" name="form_name" class="formhome_getquote">
+            
+            
+            <div class="input-wrapper">
+                <input oninput="this.value=this.value.slice(0,this.maxLength)" step="1" aria-required="true" aria-label="Zip Code" class="home-zipinput" type="number" name="q" maxlength="5" title="Enter your zip code" placeholder="Enter your ZIP code" data-original-title="Enter your zip code" aria-describedby="zipCode_errorText">
+                <span class="error-message">Please enter a 5 digit zip code.</span>
+            </div>
+            <button type="button" data-gtm="Farmers_MutlilineHP1_FindAnAgentButton_Body" class="button-cta button-cross-sell home-startquote">Find an agent </button>
+		</form>
+		<div class="getaquote-links">
+			
+		</div>
+	</section>
+</div></div>
+
+    
+</div>
+	 </div>
+</div></div>
+<div class="farmerscontainer aem-GridColumn aem-GridColumn--default--12"><div class="container">
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div></div></div>
+<div class="rightrail aem-GridColumn aem-GridColumn--default--12"><section class="right-rail-framework">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 left-column">
+                <div class="left-column-content">
+                   <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text article-list-header">
+    <h2>Learn From Experience </h2>
+<p>Stories and information to help you plan, prepare and protect what matters most.</p>
+
+</div> 
+
+</div>
+<div class="articlelist aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<div class="article-list" style="margin-bottom:0px;">
+	 <a href="/learn/plan-and-prep/car-price-negotiation-tips-from-sales-trainer" data-gtm="Farmers_MultilineHP1_LFEArticle1Link_Body">
+		 <div class="row content">
+				<div class="col-lg-5 col-md-5 col-sm-5 text">
+				   <h3>New Car Negotiation Tactics That Could Save $100s (or $1,000s) on Your Next Deal</h3>
+				   <p>A veteran auto-industry consultant explains car buying these days—and why heavy price negotiating tactics are a thing of the past</p>
+				</div>
+				
+				<div class="col-lg-7 col-md-7 col-sm-7 image">
+				
+                	<img alt="New Car Negotiation Tactics That Could Save $100s (or $1,000s) on Your Next Deal" src="/content/dam/blog/images/thumbnails/carNegotiation_parkedCars_324x190.jpg">
+                
+                
+				</div>       
+		 </div>
+	 </a>
+</div></div>
+<div class="articlelist aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<div class="article-list" style="margin-bottom:0px;">
+	 <a href="/learn/plan-and-prep/how-to-plan-a-closet-remodel" data-gtm="Farmers_MultilineHP1_LFEArticle2Link_Body">
+		 <div class="row content">
+				<div class="col-lg-5 col-md-5 col-sm-5 text">
+				   <h3>Before You Redo Your Closet, Read This</h3>
+				   <p>How a well-planned closet remodel and renovation can solve wardrobe problems and save money</p>
+				</div>
+				
+				<div class="col-lg-7 col-md-7 col-sm-7 image">
+				
+                	<img alt="Before You Redo Your Closet, Read This" src="/content/dam/blog/images/hero/ClosetRedo-ClosetOrganizer_HeroThumbnail_324x190.jpg">
+                
+                
+				</div>       
+		 </div>
+	 </a>
+</div></div>
+<div class="articlelist aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+<div class="article-list" style="margin-bottom:0px;">
+	 <a href="/life-compass" data-gtm="Farmers_MultilineHP1_LFEArticle3Link_Body">
+		 <div class="row content">
+				<div class="col-lg-5 col-md-5 col-sm-5 text">
+				   <h3>Confused About Life Insurance? </h3>
+				   <p>Clear up some common misconceptions about life insurance with the Farmers Life Compass tool. By answering a few simple questions, you can get a sense of your potential life insurance needs. </p>
+				</div>
+				
+				<div class="col-lg-7 col-md-7 col-sm-7 image">
+				
+                
+                   <div><!-- /*
+  Copyright 2016 Adobe Systems Incorporated
+  All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+*/ -->
+
+    
+    
+
+
+
+    <!-- /* Viewer container when there is an asset */ -->
+	<div class="cq-dd-image ">
+        <div id="dynamicmedia_articlelist" data-current-page="/content/falcon/en/index/multiline-insurance" data-page-locale="en" data-asset-path="farmers/life-compass-article-list-v2" data-asset-type="image" data-viewer-path="/etc/dam/viewers/s7viewers/" data-imageserver="https://s7d2.scene7.com/is/image/" data-videoserver="https://s7d2.scene7.com/is/content/" data-contenturl="/" data-wcmdisabled data-linktarget="_self" class="s7dm-dynamic-media">
+        </div>
+    </div>
+    <!-- /* Placeholder when there is no content */ -->
+	
+
+
+
+</div>
+                
+				</div>       
+		 </div>
+	 </a>
+</div></div>
+
+    
+</div></div>
+                
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 right-column">
+                <div class="right-rail">
+                    <div class="right-rail-content">                        
+                     <div>
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="farmersText aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="rich-text ">
+    <p><span class="uppercase-lead-in">Q:</span>I'm about to buy my first home and figuring out the insurance coverage I want. I have lot of jewelry and collectibles. Are my valuables covered under a homeowners policy?</p>
+<p><span class="uppercase-lead-in">A:</span>The short answer to your question is yes. However, one of the biggest mistakes consumers can make is to assume all your valuables will be covered automatically. You may have to add some items separately to your policy.</p>
+<p><i>- Douglas Bolerjack, a Farmers Insurance® agent based in Columbia, Missouri.</i></p>
+<p><i><a data-gtm="Farmers_MultilineHP1_RRLink1_RightRail" href="https://www.farmers.com/learn/insurance-questions/home-coverage-for-valuable-items">Find the answer and read more about coverage for valuables</a></i></p>
+
+</div> 
+
+</div>
+
+    
+</div></div>	  
+                    </div>
+        
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section></div>
+
+    
+</div></div>
+<div class="logout-survey aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+<div class="modal fade" id="logoutsurvey" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="false" data-close-exptime="30" data-yes-exptime="180" data-no-exptime="180">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <!-- Modal Header -->
+         <div class="modal-header">
+            <button type="button" class="close closeFeedback no_outline" data-dismiss="modal" aria-label="closeFeedback"></button>
+            <h4 class="modal-title">We Value Your Feedback!</h4>
+         </div>
+         <!-- Modal body -->
+         <div class="modal-body">
+          	<p>Thank you for visiting Farmers.com. Please help us improve your experience on our site by taking a short survey.</p>
+<p><b>This survey is intended to get your feedback on this most recent visit.</b></p>
+<p>This survey is conducted by an independent company, Qualtrics.</p>
+
+            <p>
+               <button class="button-cta button-primary" id="yessurvey" data-href="https://farmers.qualtrics.com/jfe/form/SV_6ofIMe1dMowGYhn">Yes, I&#39;ll Give Feedback</button>
+            </p>
+            <p> <a id='nothanks'>No, Thanks</a></p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<form>
+	<input type="hidden" value="production" name="whichWebsiteInput" id="whichWebsiteInput">
+	<input type="hidden" id="whichWebsiteFromCookieInput" name="whichWebsiteFromCookieInput">
+	<input type="hidden" id="endUserChoiceInput" name="endUserChoiceInput">
+	<input type="hidden" id="whichBrowserInput" name="whichBrowserInput">
+	<input type="hidden" id="browserSpecificsInput" name="browserSpecificsInput">
+	<input type="hidden" id="currentURLInput" name="currentURLInput">
+	<input type="hidden" id="cookieExpiresInput" name="cookieExpiresInput">
+	<input type="hidden" id="cookieObject" name="cookieObject">
+</form></div>
+<div class="feedback aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+    <a href="javascript:void(0);" onclick="openfeedback(this)" ; data-href="https://farmers.qualtrics.com/SE/?SID=SV_4GCytpHEO44R4vb">
+      <p class="desktopfeedback button-cta button-primary d-sm-none">
+      Feedback
+      <i class="fa fa-external-link"></i></p>
+    </a>
+
+    <a href="javascript:void(0);" onclick="openfeedback(this)" ; data-href="https://farmers.qualtrics.com/SE/?SID=SV_4GCytpHEO44R4vb">
+      <p class="givefeedback button-cta button-primary d-md-none">
+      <i class="fa fa-thumbs-up"></i> Give Feedback
+      <i class="fa fa-external-link"></i></p>
+    </a>
+
+
+</div>
+<div class="fatfooter aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+    
+
+
+
+
+    <footer class="footer">
+        <div class="container footer-content d-block d-sm-none">
+            <div class="row">
+                <section class="list-section">
+                     <h3>
+						
+						
+							About
+						
+               		 </h3>
+                    
+                        
+                                
+                                    <ul class="list-one-column ">
+                                
+                                <li>
+                                    <a href="/about-us/" data-gtm="Farmers_HP_Footer_About">About us</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/corporate-giving/" data-gtm="Farmers_HP_Footer_CorporateGiving">Corporate giving</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/news/" data-gtm="Farmers_HP_Footer_Newsroom">Newsroom</a>
+                                </li>
+                                
+                            
+                    
+                </section>
+            
+                <section class="list-section">
+                     <h3>
+						
+						
+							Resources
+						
+               		 </h3>
+                    
+                        
+                                
+                                    <ul class="list-two-column ">
+                                
+                                <li>
+                                    <a href="https://recruitment.farmers.com/" data-gtm="Farmers_HP_Footer_AgentCareers">Be a Farmers agent</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/discounts/" data-gtm="Farmers_HP_Footer_Discounts">Discounts</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/mobile/" data-gtm="Farmers_HP_Footer_MobileApp">Farmers Mobile App</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/accessibility/" data-gtm="Farmers_HP_Footer_Accessibility">Digital Accessibility</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/farmers-friendly-review/" data-gtm="Farmers_HP_Footer_FFR">Farmers Friendly Review®</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/rewardsvisa/" data-gtm="Farmers_HP_Footer_Visa">Farmers® Rewards Visa® Card</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/faq/" data-gtm="Farmers_HP_Footer_FAQ">FAQ</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/learn/" data-gtm="Farmers_HP_Footer_LFE">Learn From Experience</a>
+                                </li>
+                                
+                            
+                    
+                </section>
+            
+                <section class="list-section">
+                     <h3>
+						
+						
+							Quick Service Links
+						
+               		 </h3>
+                    
+                        
+                                
+                                    <ul class="list-two-column ">
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/eFNOL/eFNOL_Login?SO=01" data-gtm="Farmers_HP_Footer_QS_Contact">Report a claim</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/customerselfservice/CSSU#/forgotuserpassword" data-gtm="Farmers_HP_Footer_QS_Forgot">Forgot username/password</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/payments/" data-gtm="Farmers_HP_Footer_QS_Payments">Make a payment</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/customerselfservice/CSSU#/registration/policyinfo" data-gtm="Farmers_HP_Footer_QS_Register">Register for an account</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="/claims/roadside-assistance/" data-gtm="Farmers_HP_Footer_QS_Roadside">Roadside assistance</a>
+                                </li>
+                                
+                            
+                                
+                                <li>
+                                    <a href="https://www.farmers.com/login/?%23/idcards" data-gtm="Farmers_HP_Footer_QS_IDCard">View Auto ID card</a>
+                                </li>
+                                
+                            
+                    
+                </section>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="bluefooter aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+<div class="global_footer_new">
+   <div id="global-footer">
+      <section class="global_footer">
+         <div class="social-web-links">
+            <div class="container social-web-links-list">
+               
+                  <ul>
+                     <li><a href="/site-map/" data-gtm="Farmers_HP_Footer_Sitemap">Sitemap</a></li>
+                  
+                     <li><a href="/careers/" data-gtm="Farmers_HP_Footer_Careers">Careers</a></li>
+                  
+                     <li><a href="/contact-us/" data-gtm="Farmers_HP_Footer_Contact">Contact Us</a></li>
+                  
+                     <li><a href="/disclaimer/terms-of-use/" data-gtm="Farmers_HP_Footer_TermsofUse">Terms of Use</a></li>
+                  
+                     <li><a href="/disclaimer/privacy-policy/" data-gtm="Farmers_HP_Footer_Privacy">Privacy Policy</a></li>
+                  
+                     <li><a href="/companies/" data-gtm="Farmers_HP_Footer_Companies">Our Companies</a></li>
+                  </ul>
+               
+            </div>
+         </div>
+         <div class="social-links">
+            
+
+
+  
+    
+    
+  
+    <div class="social-web-links-icons">  
+           <ul aria-label="Social Media" role="navigation">
+             <li>
+                <a class="btn" href="https://www.facebook.com/FarmersInsurance" title="Facebook" role="button" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="https://twitter.com/wearefarmers" title="Twitter" role="button" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="http://instagram.com/wearefarmers/" title="Instagram" role="button" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+             </li>
+           
+             <li>
+                <a class="btn" href="https://www.linkedin.com/company/farmers-insurance" title="Linkedin" role="button" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+             </li>
+           </ul>     
+     </div>
+
+         </div>
+         <div class="farmers-footer-logo">
+            <a href="https://www.farmers.com" target="_self">
+            <img src="/content/dam/farmers/marketing/digital/aem/images/misc/Logo_Footer.png" alt="Farmers Logo">
+            </a>
+         </div>
+         <p><p>© 2018 Farmers</p>
+</p>
+      </section>
+   </div>
+   <section id="fat-footer_2" class="fat_footer">
+     <div class="container">  
+      <div class="col-sm-11 foot-note">
+         <p><p><sup id="1"><span class="sr-only">return link</span>1</sup> Life insurance issued by Farmers New World Life Insurance Company, 3003 77th Ave SE, Mercer Island, WA 98040.<br />
+Products &amp; features may not be available in all states &amp; may vary by state. Restrictions, exclusions, limits, and conditions apply.<br />
+<br />
+<span id="2"><span class="sr-only">return link</span>*</span> Securities offered through Farmers Financial Solutions, LLC, (In NY: Farmers Financial Solutions and Insurance Agency), 30801 Agoura Rd. Bldg. 1 Agoura Hills, CA 91301. Member <a href="https://www.finra.org/" target="_blank" class="no_outline">FINRA <img src="/content/dam/ada/new_window_blue.svg" alt="opens in new window" height="12" width="12"/></a> &amp; <a href="https://www.sipc.org/" target="_blank" class="no_outline">SIPC <img src="/content/dam/ada/new_window_blue.svg" alt="opens in new window" height="12" width="12"/></a>.<br />
+<br />
+* <a href="https://www.farmers.com/faq" class="no_outline">Products and Services/Auto or Home/Questions you may have about Risk Assessment Indicators</a><br />
+<br />
+**Between 7/1/15 and 9/30/15, the average estimated savings off MSRP presented by TrueCar Certified Dealers to users of TrueCar powered websites, based on users who configured virtual vehicles and who TrueCar identified as purchasing a new vehicle of the same make and model listed on the certificate from a Certified Dealer as of 10/31/2015, was $3,279. Your actual savings may vary based on multiple factors including the vehicle you select, region, dealer, and applicable vehicle specific manufacturer incentives which are subject to change.  The Farmers Car Shopping Service website is owned and operated by TrueCar, which is not affiliated with any of the companies comprising the Farmers Insurance Group of Companies.<br />
+<br />
+</p>
+</p>
+      </div>
+     </div> 
+   </section>
+</div></div>
+
+    
+</div></div>
+
+    
+</div></div>
+
+</div>
+
+        
+    
+    
+
+    
+    
+<script type="text/javascript" src="/etc.clientlibs/farmers/clientlibs/clientlib-libraries.js"></script>
+<script type="text/javascript" src="/etc.clientlibs/farmers/clientlibs/clientlib-base.js"></script>
+
+
+
+
+
+    
+
+
+        
+
+    <script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]); _cf.push(['_setBm', true]);</script><script type="text/javascript" src="/_bm/abd-1-30"></script></body>
+</html>
+
